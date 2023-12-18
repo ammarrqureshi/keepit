@@ -15,8 +15,12 @@ import {
   TextArea,
   AlertDialog,
 } from "@radix-ui/themes";
-import { PencilIcon } from "./PencilIcon";
-import { MoonIcon, Pencil1Icon, TrashIcon } from "@radix-ui/react-icons";
+import {
+  MoonIcon,
+  Pencil1Icon,
+  Pencil2Icon,
+  TrashIcon,
+} from "@radix-ui/react-icons";
 import { NotebookRings } from "./NotebookRings";
 
 function App() {
@@ -103,11 +107,10 @@ function App() {
                     background: "auto",
                     padding: ".5rem",
                     zIndex: "999",
-                    top: '.2rem'
+                    top: ".2rem",
                   }}
                   id="notebook-actions"
                   gap="3"
-                 
                   position="absolute"
                 >
                   <IconButton variant="outline">
@@ -129,11 +132,13 @@ function App() {
 
                       <Flex gap="3" mt="4" justify="end">
                         <AlertDialog.Cancel>
-                          <Button variant="soft" color="gray">Cancel</Button>
+                          <Button variant="soft" color="gray">
+                            Cancel
+                          </Button>
                         </AlertDialog.Cancel>
                         <AlertDialog.Action>
                           <Button variant="solid" color="red">
-                          Delete Notebook
+                            Delete Notebook
                           </Button>
                         </AlertDialog.Action>
                       </Flex>
@@ -141,7 +146,6 @@ function App() {
                   </AlertDialog.Root>
                 </Flex>
               </Card>
-            
             </Flex>
           </Section>
         </Container>
@@ -153,7 +157,8 @@ function App() {
             variant="solid"
             className=""
           >
-            <PencilIcon></PencilIcon> Add Notebook{" "}
+            <Pencil2Icon width="20" height="20" />
+            Add Notebook{" "}
           </Button>
         </Dialog.Trigger>
         <Dialog.Content>
