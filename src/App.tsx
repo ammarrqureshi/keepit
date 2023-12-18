@@ -13,9 +13,11 @@ import {
   Dialog,
   TextField,
   TextArea,
+  AlertDialog,
 } from "@radix-ui/themes";
 import { PencilIcon } from "./PencilIcon";
-import { MoonIcon } from "@radix-ui/react-icons";
+import { MoonIcon, Pencil1Icon, TrashIcon } from "@radix-ui/react-icons";
+import { NotebookRings } from "./NotebookRings";
 
 function App() {
   return (
@@ -80,7 +82,9 @@ function App() {
           </Section>
           <Section size="2">
             <Flex wrap="wrap" gap="3" justify="between" align="center">
-              <Card>
+              <Card id="notebook-card" style={{ position: "relative" }}>
+                <NotebookRings notebookHeight={9}></NotebookRings>
+
                 <Heading size="6" as="h3">
                   This is the title
                 </Heading>
@@ -93,36 +97,51 @@ function App() {
                   text for te lorem imps uemTe text for te lorem imps uem Te
                   text for te lorem imps uem
                 </Text>
+                <Flex
+                  style={{
+                    right: ".2rem",
+                    background: "auto",
+                    padding: ".5rem",
+                    zIndex: "999",
+                    top: '.2rem'
+                  }}
+                  id="notebook-actions"
+                  gap="3"
+                 
+                  position="absolute"
+                >
+                  <IconButton variant="outline">
+                    <Pencil1Icon width="18" height="18" />
+                  </IconButton>
+
+                  <AlertDialog.Root>
+                    <AlertDialog.Trigger>
+                      <IconButton variant="outline" color="red">
+                        <TrashIcon width="18" height="18" />
+                      </IconButton>
+                    </AlertDialog.Trigger>
+                    <AlertDialog.Content style={{ maxWidth: 450 }}>
+                      <AlertDialog.Title>Delete Notebook</AlertDialog.Title>
+                      <AlertDialog.Description size="2">
+                        Are you sure? You are going to delete this notebook
+                        permanently.
+                      </AlertDialog.Description>
+
+                      <Flex gap="3" mt="4" justify="end">
+                        <AlertDialog.Cancel>
+                          <Button variant="soft" color="gray">Cancel</Button>
+                        </AlertDialog.Cancel>
+                        <AlertDialog.Action>
+                          <Button variant="solid" color="red">
+                          Delete Notebook
+                          </Button>
+                        </AlertDialog.Action>
+                      </Flex>
+                    </AlertDialog.Content>
+                  </AlertDialog.Root>
+                </Flex>
               </Card>
-              <Card>
-                <Heading size="6" as="h3">
-                  This is the title
-                </Heading>
-                <Separator my="3" size="4" />
-                <Text>
-                  Te text for te lorem imps uemTe text for te lorem imps uem Te
-                  text for te lorem imps uem Te text for te lorem imps uem Te
-                  text for te lorem imps uemTe text for te lorem imps uem Te
-                  text for te lorem imps uem Te text for te lorem imps uem Te
-                  text for te lorem imps uemTe text for te lorem imps uem Te t
-                </Text>
-              </Card>
-              <Card>
-                <Heading size="6" as="h3">
-                  This is the title
-                </Heading>
-                <Separator my="3" size="4" />
-                <Text>
-                  Te text for te lorem imps uemTe text for te lorem imps uem Te
-                  text for te lorem imps uem Te text for te lorem imps uem Te
-                  text for te lorem imps uemTe text for te lorem imps uem Te
-                  text for te lorem imps uem Te text for te lorem imps uem Te
-                  text for te lorem imps uemTe text for te lorem imps uem Te
-                  text for te lorem imps uem Te text for te lorem imps uem Te
-                  text for te lorem imps uemTe text for te lorem imps uem Te
-                  text for te lorem imps
-                </Text>
-              </Card>
+            
             </Flex>
           </Section>
         </Container>
@@ -138,7 +157,7 @@ function App() {
           </Button>
         </Dialog.Trigger>
         <Dialog.Content>
-          <Flex direction="column"  gap="4">
+          <Flex direction="column" gap="4">
             <Dialog.Title>Add Notebook</Dialog.Title>
             <Dialog.Description size="2" mb="4">
               Add a new notebook to your notes
@@ -149,7 +168,9 @@ function App() {
               <Button size="4">Add Notebook</Button>
             </Dialog.Close>
             <Dialog.Close>
-              <Button size="4" variant="soft">Cancel</Button>
+              <Button size="4" variant="soft" color="gray">
+                Cancel
+              </Button>
             </Dialog.Close>
           </Flex>
         </Dialog.Content>
