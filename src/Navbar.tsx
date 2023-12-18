@@ -1,6 +1,5 @@
 import { MoonIcon } from '@radix-ui/react-icons'
 import { Flex, IconButton, Heading, Tooltip, Avatar } from '@radix-ui/themes'
-import React from 'react'
 
 export const Navbar = () => {
   return (
