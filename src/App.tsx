@@ -87,7 +87,7 @@ function App() {
           <Section size="2">
             <Flex wrap="wrap" gap="3" justify="between" align="center">
               <Card id="notebook-card" style={{ position: "relative" }}>
-                <NotebookRings notebookHeight={9}></NotebookRings>
+                <NotebookRings notebookHeight={40}></NotebookRings>
 
                 <Heading size="6" as="h3">
                   This is the title

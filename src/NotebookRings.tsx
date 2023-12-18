@@ -1,4 +1,4 @@
-import { MinusIcon } from "@radix-ui/react-icons";
+import { LinkNone1Icon } from "@radix-ui/react-icons";
 import { Flex } from "@radix-ui/themes";
 
 interface notebookRingsProps {
@@ -7,7 +7,7 @@ interface notebookRingsProps {
 export const NotebookRings = ({ notebookHeight }: notebookRingsProps) => {
   const rings: JSX.Element[] = [];
   for (let i = 1; i <= notebookHeight; i++) {
-    rings.push(<MinusIcon height="18" width="18" />);
+    rings.push(<LinkNone1Icon color="gray" height="18" width="18" />);
   }
   return (
     <div>
