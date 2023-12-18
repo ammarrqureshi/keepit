@@ -12,8 +12,6 @@ import {
   Inset,
 } from "@radix-ui/themes";
 
-// import { NotebookRings } from "./NotebookRings";
-
 export const NotebookCard = () => {
   return (
     <Card id="notebook-card" className="max-w-sm min-w-sm min-h-max max-h-min">

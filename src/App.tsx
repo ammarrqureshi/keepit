@@ -13,15 +13,14 @@ import {
   ScrollArea,
 } from "@radix-ui/themes";
 import { Pencil2Icon } from "@radix-ui/react-icons";
-import { NotebookCard } from "./NotebookCard";
-import { Navbar } from "./Navbar";
+import { NotebookCard } from "@components/notebook/NotebookCard";
+import { Navbar } from "@components/nav/Navbar";
 
 function App() {
   return (
     <>
       <Box>
-        <Navbar></Navbar>
-
+        <Navbar></Navbar>\{" "}
         <Container size="3">
           <Section size="2">
             <Heading as="h2" size="8">
@@ -35,18 +34,27 @@ function App() {
                 <Tabs.Trigger value="recent">Recent</Tabs.Trigger>
               </Tabs.List>
               <Tabs.Content value="all-notebooks">
-               
-                  <ScrollArea type="always" scrollbars="vertical" style={{ height: 500 }}>
-                  <Flex mt="4" wrap="wrap" gap="3" justify="center" align="center">
+                <ScrollArea
+                  type="always"
+                  scrollbars="vertical"
+                  style={{ height: 500 }}
+                >
+                  <Flex
+                    mt="4"
+                    wrap="wrap"
+                    gap="3"
+                    justify="center"
+                    align="center"
+                  >
                     <NotebookCard></NotebookCard>
                     <NotebookCard></NotebookCard>
                     <NotebookCard></NotebookCard>
                     <NotebookCard></NotebookCard>
-                    <NotebookCard></NotebookCard> 
-                    <NotebookCard></NotebookCard> <NotebookCard></NotebookCard> <NotebookCard></NotebookCard> <NotebookCard></NotebookCard> 
-                     </Flex>
-                  </ScrollArea>
-              
+                    <NotebookCard></NotebookCard>
+                    <NotebookCard></NotebookCard> <NotebookCard></NotebookCard>{" "}
+                    <NotebookCard></NotebookCard> <NotebookCard></NotebookCard>
+                  </Flex>
+                </ScrollArea>
               </Tabs.Content>
             </Tabs.Root>
           </Section>
