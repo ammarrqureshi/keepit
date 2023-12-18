@@ -14,6 +14,7 @@ import {
   TextField,
   TextArea,
   AlertDialog,
+  Tooltip,
 } from "@radix-ui/themes";
 import {
   MoonIcon,
@@ -67,9 +68,12 @@ function App() {
             </Flex>
           </a>
           <Flex gap="4" justify="between" align="center">
-            <IconButton variant="outline">
-              <MoonIcon width="18" height="18" />
-            </IconButton>
+            <Tooltip content="light">
+              <IconButton variant="outline">
+                <MoonIcon width="18" height="18" />
+              </IconButton>
+            </Tooltip>
+
             <Avatar
               radius="medium"
               src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
@@ -113,17 +117,23 @@ function App() {
                   gap="3"
                   position="absolute"
                 >
-                  <IconButton variant="outline">
-                    <Pencil1Icon width="18" height="18" />
-                  </IconButton>
+                  <Tooltip content="Edit">
+                    <IconButton variant="outline">
+                      <Pencil1Icon width="18" height="18" />
+                    </IconButton>
+                  </Tooltip>
 
                   <AlertDialog.Root>
+                  <Tooltip content="Delete">
                     <AlertDialog.Trigger>
-                      <IconButton variant="outline" color="red">
-                        <TrashIcon width="18" height="18" />
-                      </IconButton>
+                    
+                        <IconButton variant="outline" color="red">
+                          <TrashIcon width="18" height="18" />
+                        </IconButton>
+                  
                     </AlertDialog.Trigger>
-                    <AlertDialog.Content style={{ maxWidth: 450 }}>
+                    </Tooltip>
+                    <AlertDialog.Content  style={{ maxWidth: 450 }}>
                       <AlertDialog.Title>Delete Notebook</AlertDialog.Title>
                       <AlertDialog.Description size="2">
                         Are you sure? You are going to delete this notebook
@@ -150,18 +160,22 @@ function App() {
           </Section>
         </Container>
       </Box>
-      <Dialog.Root>
+      <Dialog.Root > 
+        <Tooltip content="Add New Notebook">
         <Dialog.Trigger>
-          <Button
-            style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
-            variant="solid"
-            className=""
-          >
-            <Pencil2Icon width="20" height="20" />
-            Add Notebook{" "}
-          </Button>
-        </Dialog.Trigger>
-        <Dialog.Content>
+         
+            <Button
+              style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
+              variant="solid"
+              className=""
+            >
+              <Pencil2Icon width="20" height="20" />
+              Add Notebook{" "}
+            </Button>
+      
+        </Dialog.Trigger>    
+        </Tooltip>
+        <Dialog.Content size="4">
           <Flex direction="column" gap="4">
             <Dialog.Title>Add Notebook</Dialog.Title>
             <Dialog.Description size="2" mb="4">
