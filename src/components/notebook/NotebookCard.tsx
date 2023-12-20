@@ -16,10 +16,11 @@ import { NotebookType } from "types.type";
 export const NotebookCard = (notebook: NotebookType) => {
   return (
     <Card id="notebook-card" className="max-sm:min-w-[50%] min-w-[33%] min-h-[300px] max-h-[70%]">
-      <Flex className="bg-orange-500">
-        <Inset
-          className="min-w-[2rem] max-w-[2rem]"
-          clip="border-box"
+      <div className="bg-green-500 w-6 h-full absolute">h</div>
+      <Flex>
+         <Inset
+          className=""
+          clip="padding-box"
           side="left"
           pr="current"
         >
@@ -29,14 +30,16 @@ export const NotebookCard = (notebook: NotebookType) => {
             style={{
               display: "block",
               objectFit: "cover",
-              width: "100px",
-              height: "100%",
+              width: "100%",
+              height: "140px",
 
               backgroundColor: "var(--gray-5)",
             }}
           />
         </Inset>
-        <Flex  direction="column">
+    
+     
+        <Flex   direction="column">
           <div className="text-wrap max-w-[60%] ">
             <Heading size="6" as="h3" trim="end">
               {notebook.title}
@@ -96,7 +99,7 @@ export const NotebookCard = (notebook: NotebookType) => {
             </AlertDialog.Root>
           </Flex>
         </Flex>
-      </Flex>
+        </Flex>
     </Card>
   );
 };
