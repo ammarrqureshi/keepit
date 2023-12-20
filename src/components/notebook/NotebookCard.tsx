@@ -11,13 +11,14 @@ import {
   Text,
   Inset,
 } from "@radix-ui/themes";
+import { NotebookType } from "types.type";
 
-export const NotebookCard = () => {
+export const NotebookCard = (notebook: NotebookType) => {
   return (
-    <Card id="notebook-card" className="max-w-sm min-w-sm min-h-max max-h-min">
+    <Card id="notebook-card" className="max-sm:min-w-[50%] min-w-[33%] min-h-[300px] max-h-[70%]">
       <Flex>
         <Inset
-          className="min-w-[100px] max-w-[100px]"
+          className="min-w-[2rem] max-w-[2rem] "
           clip="border-box"
           side="left"
           pr="current"
@@ -36,15 +37,14 @@ export const NotebookCard = () => {
           />
         </Inset>
         <Flex className="text-ellipsis overflow-hidden" direction="column">
-          <Heading size="6" as="h3">
-            This is the title
-          </Heading>
+          <div className="text-wrap max-w-[60%] ">
+            <Heading size="6" as="h3" trim="end">
+              {notebook.title}
+            </Heading>
+          </div>
+
           <Separator my="3" size="4" />
-          <Text>
-            Te text for te lorem imps uemTe text for te lorem imps uem Te text
-            for te lorrem imps uem Te text for te lorem imps uem Te text for te
-            lorem i
-          </Text>
+          <Text className="overflow-hidden h-full">{notebook.description}</Text>
           <Flex
             style={{
               right: ".2rem",
@@ -62,6 +62,8 @@ export const NotebookCard = () => {
                 <Pencil1Icon width="18" height="18" />
               </IconButton>
             </Tooltip>
+
+            {/* DELETE NOTEBOOK ALERT CODE */}
 
             <AlertDialog.Root>
               <Tooltip content="Delete">

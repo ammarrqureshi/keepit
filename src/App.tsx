@@ -11,10 +11,13 @@ import {
   Tooltip,
   Tabs,
   ScrollArea,
+  Text,
+  IconButton,
 } from "@radix-ui/themes";
-import { Pencil2Icon } from "@radix-ui/react-icons";
+import { Cross1Icon, Pencil2Icon } from "@radix-ui/react-icons";
 import { NotebookCard } from "@components/notebook/NotebookCard";
 import { Navbar } from "@components/nav/Navbar";
+import { notebooks } from "./data";
 
 function App() {
   return (
@@ -36,23 +39,20 @@ function App() {
               <Tabs.Content value="all-notebooks">
                 <ScrollArea
                   type="always"
-                  scrollbars="vertical"
-                  style={{ height: 500 }}
+                  scrollbars="horizontal"
+                  className="h-full py-4"
                 >
                   <Flex
                     mt="4"
-                    wrap="wrap"
+                 
                     gap="3"
-                    justify="center"
-                    align="center"
+                    align="start"
+                    className="w-md"
                   >
-                    <NotebookCard></NotebookCard>
-                    <NotebookCard></NotebookCard>
-                    <NotebookCard></NotebookCard>
-                    <NotebookCard></NotebookCard>
-                    <NotebookCard></NotebookCard>
-                    <NotebookCard></NotebookCard> <NotebookCard></NotebookCard>{" "}
-                    <NotebookCard></NotebookCard> <NotebookCard></NotebookCard>
+                  {notebooks.map(notebook =>
+                  <NotebookCard {...notebook}></NotebookCard>
+                    
+                 )}
                   </Flex>
                 </ScrollArea>
               </Tabs.Content>
@@ -60,6 +60,7 @@ function App() {
           </Section>
         </Container>
       </Box>
+
       <Dialog.Root>
         <Tooltip content="Add New Notebook">
           <Dialog.Trigger>
@@ -73,31 +74,52 @@ function App() {
             </Button>
           </Dialog.Trigger>
         </Tooltip>
-        <Dialog.Content size="4">
+        <Dialog.Content className="relative" size="4">
           <Flex direction="column" gap="4">
             <Dialog.Title size="7">Add Notebook</Dialog.Title>
             <Dialog.Description size="2" mb="4">
               Add a new notebook to your notes
             </Dialog.Description>{" "}
-            <TextField.Input
-              variant="soft"
-              size="3"
-              placeholder="Notebook title..."
-            />{" "}
-            <TextArea
-              variant="soft"
-              size="3"
-              placeholder="Write something here..."
-            />{" "}
-            <Dialog.Close>
-              <Button size="4">Add Notebook</Button>
-            </Dialog.Close>
-            <Dialog.Close>
-              <Button size="4" variant="soft" color="gray">
-                Cancel
-              </Button>
-            </Dialog.Close>
+            <label>
+              <Text as="div" size="3" mb="1" weight="bold">
+                Title
+              </Text>
+              <TextField.Input
+                variant="surface"
+                size="3"
+                placeholder="Notebook title..."
+              />{" "}
+            </label>
+            <label>
+              <Text as="div" size="3" mb="1" weight="bold">
+                Description
+              </Text>
+              <TextArea
+                variant="surface"
+                size="3"
+                placeholder="Write something here..."
+              />{" "}
+            </label>
+            <Flex gap="3" mt="4" justify="end">
+              <Dialog.Close>
+                <Button size="3" variant="soft" color="gray">
+                  Cancel
+                </Button>
+              </Dialog.Close>
+              <Dialog.Close>
+                <Button size="3">Add Notebook</Button>
+              </Dialog.Close>
+            </Flex>
           </Flex>
+          <Dialog.Close>
+            <IconButton
+              className="absolute top-3 right-3"
+              variant="ghost"
+              color="gray"
+            >
+              <Cross1Icon width="18" height="18" />
+            </IconButton>
+          </Dialog.Close>
         </Dialog.Content>
       </Dialog.Root>
     </>
