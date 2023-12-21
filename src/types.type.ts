@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 
 export type NotebookType = {
   title: string;
+  color?: string | "#898989";
   description: string;
   created_at: Date;
   notes: [];

@@ -1,7 +1,7 @@
 import { Box, Flex, IconButton } from "@radix-ui/themes";
 import { DrawerItem } from "./DrawerItem";
 import { DrawerSearchItem } from "./DrawerSearchItem";
-import { ChevronLeftIcon, PersonIcon, ReaderIcon } from "@radix-ui/react-icons";
+import { ChevronLeftIcon, DashboardIcon, PersonIcon, ReaderIcon } from "@radix-ui/react-icons";
 import { useContext } from "react";
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { SidebarContextType } from "@/types.type";
@@ -37,6 +37,10 @@ export const Sidebar = () => {
           gap="4"
           className={` row-start-2  max-w-[400px] bg-inherit z-50`}
         >
+       
+          <DrawerItem icon="DashboardIcon" value="Dashboard">
+            <DashboardIcon width="22" height="22" />
+          </DrawerItem>
           <DrawerItem icon="ReaderIcon" value="All Notebooks">
             <ReaderIcon width="22" height="22" />
           </DrawerItem>
