@@ -8,6 +8,7 @@ export const Navbar = () => {
   const { isExpanded, setIsExpanded } = useContext(
     SidebarContext
   ) as SidebarContextType;
+
   return (
     <Flex id="nav" justify="between" align="center" className="p-1 px-2">
       <span>
