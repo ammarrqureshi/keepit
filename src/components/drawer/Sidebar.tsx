@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, IconButton } from "@radix-ui/themes";
+import { Box, Flex, IconButton } from "@radix-ui/themes";
 import { DrawerItem } from "./DrawerItem";
 import { DrawerSearchItem } from "./DrawerSearchItem";
 import {
@@ -43,7 +43,7 @@ export const Sidebar = () => {
           gap="4"
           className={` row-start-2  max-w-[400px] bg-inherit z-50`}
         >
-          <CreateNoteItem/>
+          <CreateNoteItem />
           <DrawerItem icon="DashboardIcon" value="Dashboard">
             <DashboardIcon width="22" height="22" />
           </DrawerItem>

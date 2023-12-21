@@ -17,7 +17,7 @@ export const AddNotebook = () => {
       <Tooltip content="Add New Notebook">
         <Dialog.Trigger>
           <Button
-            style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
+            style={{ position: "fixed", bottom: "1rem", right: "1rem", zIndex: 99999 }}
             variant="solid"
             className=""
           >

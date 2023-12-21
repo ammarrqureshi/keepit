@@ -1,6 +1,6 @@
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { SidebarContextType } from "@/types.type";
-import { PlusCircledIcon, PlusIcon } from "@radix-ui/react-icons";
+import { PlusIcon } from "@radix-ui/react-icons";
 import { Button, Grid, Box } from "@radix-ui/themes";
 import { useContext } from "react";
 
@@ -9,13 +9,7 @@ export const CreateNoteItem = () => {
 
   return (
     <Button variant="soft" style={{ padding: "1rem 0", margin: 4 }} size="3">
-      <Grid
-        px="4"
-        py="2"
-        columns={isExpanded ? "4" : "1"}
-        gap="4"
-        width="100%"
-      >
+      <Grid px="4" py="2" columns={isExpanded ? "4" : "1"} gap="4" width="100%">
         <Box className="flex justify-center items-center ">
           <PlusIcon width="22" height="22" />
         </Box>
