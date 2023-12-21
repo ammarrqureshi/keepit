@@ -18,12 +18,14 @@ import { Cross1Icon, Pencil2Icon } from "@radix-ui/react-icons";
 import { NotebookCard } from "@components/notebook/NotebookCard";
 import { Navbar } from "@components/nav/Navbar";
 import { notebooks } from "./data";
+import { Sidebar } from "@components/nav/Sidebar";
 
 function App() {
   return (
     <>
       <Box>
-        <Navbar></Navbar>\{" "}
+        <Sidebar></Sidebar>
+        <Navbar></Navbar>
         <Container size="3">
           <Section size="2">
             <Heading as="h2" size="8">
@@ -42,17 +44,10 @@ function App() {
                   scrollbars="horizontal"
                   className="h-full py-4"
                 >
-                  <Flex
-                    mt="4"
-                 
-                    gap="3"
-                    align="start"
-                    className="w-md"
-                  >
-                  {notebooks.map(notebook =>
-                  <NotebookCard {...notebook}></NotebookCard>
-                    
-                 )}
+                  <Flex mt="4" gap="3" align="start" className="w-md">
+                    {notebooks.map((notebook) => (
+                      <NotebookCard {...notebook}></NotebookCard>
+                    ))}
                   </Flex>
                 </ScrollArea>
               </Tabs.Content>

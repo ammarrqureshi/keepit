@@ -9,7 +9,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+::-webkit-scrollbar {
+ display: none; /* Optional: just make scrollbar invisible */
+}
 
 
 body{
