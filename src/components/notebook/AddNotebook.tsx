@@ -9,7 +9,6 @@ import {
   IconButton,
   Text,
 } from "@radix-ui/themes";
-import React from "react";
 
 export const AddNotebook = () => {
   return (

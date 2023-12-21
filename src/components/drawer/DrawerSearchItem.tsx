@@ -1,6 +1,6 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Box, Grid, IconButton, TextField } from "@radix-ui/themes";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { SidebarContextType } from "@/types.type";
 
