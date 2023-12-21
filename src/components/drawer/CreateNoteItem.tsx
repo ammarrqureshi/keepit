@@ -1,22 +1,15 @@
-import { Grid, Box, Button } from "@radix-ui/themes";
-import { ReactNode, useContext } from "react";
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { SidebarContextType } from "@/types.type";
+import { PlusCircledIcon, PlusIcon } from "@radix-ui/react-icons";
+import { Button, Grid, Box } from "@radix-ui/themes";
+import { useContext } from "react";
 
-type ItemProps = {
-  icon: string;
-  children: ReactNode;
-  value: string;
-  variant?: string;
-};
-
-export const DrawerItem = ({ icon: Icon, children, value }: ItemProps) => {
+export const CreateNoteItem = () => {
   const { isExpanded } = useContext(SidebarContext) as SidebarContextType;
 
   return (
-    <Button variant="ghost" size="3">
+    <Button variant="soft" style={{ padding: "1rem 0", margin: 4 }} size="3">
       <Grid
-        className={`  w-full `}
         px="4"
         py="2"
         columns={isExpanded ? "4" : "1"}
@@ -24,15 +17,14 @@ export const DrawerItem = ({ icon: Icon, children, value }: ItemProps) => {
         width="100%"
       >
         <Box className="flex justify-center items-center ">
-          {Icon && <Icon />}
-          {children}
+          <PlusIcon width="22" height="22" />
         </Box>
         <Box
           className={`"  ${
             isExpanded ? " flex col-span-3  " : "hidden"
           }   justify-start items-center"`}
         >
-          {value}
+          Create New Note
         </Box>
       </Grid>
     </Button>
