@@ -1,7 +1,7 @@
 import { Grid, Box, Button } from "@radix-ui/themes";
 import { ReactNode, useContext } from "react";
-import { SidebarContext } from "./contexts/SidebarContext";
-import { SidebarContextType } from "types.type";
+import { SidebarContext } from "@/contexts/SidebarContext";
+import { SidebarContextType } from "@/types.type";
 
 type ItemProps = {
   icon: string;

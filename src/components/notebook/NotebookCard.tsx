@@ -10,33 +10,18 @@ import {
   Button,
   Text,
   Inset,
+  Box,
 } from "@radix-ui/themes";
-import { NotebookType } from "types.type";
+import { NotebookType } from "@/types.type";
 
 export const NotebookCard = (notebook: NotebookType) => {
   return (
-    <Card id="notebook-card" className="max-sm:min-w-[50%] min-w-[33%] min-h-[300px] max-h-[70%]">
-      <div className="bg-green-500 w-6 h-full absolute">h</div>
+    <Box position="relative" pl="6">
+      <div className="bg-lime-300 z-[100] absolute min-w-[30px] left-0 h-full">
+        
+      </div>
+  <Card id="notebook-card" style={{ minHeight:350, maxHeight: 400 , minWidth: 300 }}>
       <Flex>
-         <Inset
-          className=""
-          clip="padding-box"
-          side="left"
-          pr="current"
-        >
-          <img
-            src="https://www.photos-public-domain.com/wp-content/uploads/2011/11/lime-green-painted-wall-texture-600x400.jpg"
-            alt="Bold typography"
-            style={{
-              display: "block",
-              objectFit: "cover",
-              width: "100%",
-              height: "140px",
-
-              backgroundColor: "var(--gray-5)",
-            }}
-          />
-        </Inset>
     
      
         <Flex   direction="column">
@@ -101,5 +86,7 @@ export const NotebookCard = (notebook: NotebookType) => {
         </Flex>
         </Flex>
     </Card>
+    </Box>
+  
   );
 };

@@ -1,8 +1,8 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Box, Grid, IconButton, TextField } from "@radix-ui/themes";
 import React, { useContext } from "react";
-import { SidebarContext } from "./contexts/SidebarContext";
-import { SidebarContextType } from "types.type";
+import { SidebarContext } from "@/contexts/SidebarContext";
+import { SidebarContextType } from "@/types.type";
 
 export const DrawerSearchItem = () => {
   const { isExpanded } = useContext(SidebarContext) as SidebarContextType;

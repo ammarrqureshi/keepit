@@ -3,8 +3,8 @@ import { DrawerItem } from "./DrawerItem";
 import { DrawerSearchItem } from "./DrawerSearchItem";
 import { ChevronLeftIcon, PersonIcon, ReaderIcon } from "@radix-ui/react-icons";
 import { useContext } from "react";
-import { SidebarContext } from "./contexts/SidebarContext";
-import { SidebarContextType } from "types.type";
+import { SidebarContext } from "@/contexts/SidebarContext";
+import { SidebarContextType } from "@/types.type";
 
 // import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
