@@ -14,18 +14,26 @@ import {
   Text,
   IconButton,
 } from "@radix-ui/themes";
-import { Cross1Icon, Pencil2Icon } from "@radix-ui/react-icons";
+import { Cross1Icon, Pencil1Icon, Pencil2Icon } from "@radix-ui/react-icons";
 import { NotebookCard } from "@components/notebook/NotebookCard";
 import { Navbar } from "@components/nav/Navbar";
 import { notebooks } from "./data";
 import { Sidebar } from "@components/nav/Sidebar";
+import { useState } from "react";
 
 function App() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsVisible(!isVisible);
+    console.log("toggled")
+  };
   return (
     <>
-      <Sidebar></Sidebar>
+  
+<Sidebar isVisible={isVisible}  toggleSidebar={toggleSidebar}></Sidebar>
       <Box px="2">
-        <Navbar></Navbar>
+        <Navbar toggleSidebar={toggleSidebar}></Navbar>
         <Container size="3">
           <Section size="2">
             <Heading as="h2" size="8">

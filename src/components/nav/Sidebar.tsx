@@ -1,12 +1,26 @@
-import { Flex } from "@radix-ui/themes";
+import { Flex, IconButton } from "@radix-ui/themes";
 import { DrawerItem } from "./DrawerItem";
 import { DrawerSearchItem } from "./DrawerSearchItem";
-import { PersonIcon, ReaderIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, ChevronLeftIcon, PersonIcon, ReaderIcon } from "@radix-ui/react-icons";
+import { useState } from "react";
 // import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
-export const Sidebar = () => {
+interface SidebarProps{
+  className?:string;
+  toggleSidebar: ()=>void;
+  isVisible: boolean
+}
+
+export const Sidebar = ({className, toggleSidebar, isVisible}:SidebarProps) => {
+  
+  
   return (
-    <div className="py-2 flex overflow-hidden flex-col justify-between h-full fixed z-[99999] group max-lg:hidden border-r border-gray-500/50">
+    <div className={`py-2  h-full fixed z-[99999] flex overflow-hidden flex-col justify-between ${isVisible ? "group  " : ""} border-r border-gray-500/50  `}>
+     <div className="absolute top-16 right-0 hidden group-hover:block">
+      <IconButton variant="soft" onClick={toggleSidebar}>
+        <ChevronLeftIcon width="18" height="18"/>
+      </IconButton>
+     </div>
       <div className="flex flex-col justify-between gap-20">
         <DrawerSearchItem />
 
