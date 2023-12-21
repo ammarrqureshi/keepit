@@ -23,8 +23,8 @@ import { Sidebar } from "@components/nav/Sidebar";
 function App() {
   return (
     <>
-      <Box>
-        <Sidebar></Sidebar>
+      <Sidebar></Sidebar>
+      <Box px="2">
         <Navbar></Navbar>
         <Container size="3">
           <Section size="2">

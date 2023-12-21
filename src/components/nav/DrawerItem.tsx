@@ -1,23 +1,30 @@
-import { ReaderIcon } from '@radix-ui/react-icons'
-import { Grid, Box, Button } from '@radix-ui/themes'
+import { Grid, Box, Button } from "@radix-ui/themes";
+import { ReactNode } from "react";
 
-export const DrawerItem = () => {
+type ItemProps = {
+  icon: string;
+  children: ReactNode,
+  value:string
+};
+
+export const DrawerItem = ({ icon:Icon, children, value }: ItemProps) => {
+
   return (
-    <Button size="3" style={{padding: "0px"}}>
-        <Grid
-          className='group-hover:grid-cols-4 '
-          px="4"
-          py="2"
-          columns="1"
-          gap="4"
-          width="auto"
-        >
-          <Box className="flex justify-center items-center ">
-            <ReaderIcon width="22" height="22" />
-          </Box>
-          <Box className="col-span-3 hidden group-hover:flex justify-start items-center">
-            All Notebooks
-          </Box>
-        </Grid></Button>
-  )
-}
+    <Button variant="ghost" size="3">
+      <Grid
+        className="group-hover:grid-cols-4 w-full "
+        px="4"
+        py="2"
+        columns="1"
+        gap="4"
+        width="100%"
+      >
+        <Box className="flex justify-center items-center ">{Icon && <Icon />}{children}
+        </Box>
+        <Box className="col-span-3 hidden group-hover:flex justify-start items-center">
+          {value}
+        </Box>
+      </Grid>
+    </Button>
+  );
+};
