@@ -1,33 +1,23 @@
-import { Flex, TextField } from "@radix-ui/themes";
+import { Flex } from "@radix-ui/themes";
 import { DrawerItem } from "./DrawerItem";
+import { DrawerSearchItem } from "./DrawerSearchItem";
 // import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 export const Sidebar = () => {
   return (
-    <div className="grid overflow-hidden grid-rows-auto justify-between h-full fixed group bg-orange-100">
-      <div className="hidden group-hover:block">
-      <TextField.Root >
-        <TextField.Input
-          variant="surface"
-          size="3"
-          placeholder="Notebook title..."
-        />{" "}
-      </TextField.Root>
-      </div>
-    
+    <div className="py-2 flex overflow-hidden flex-col justify-between h-full fixed z-[99999] group max-md:hidden border-r border-gray-500/50">
+     <div className="flex flex-col justify-between gap-20">
+     <DrawerSearchItem />
 
-      <Flex
-        direction="column"
-        gap="4"
-        className={`bg-green-100 row-start-2 overflow-hidden max-w-[400px] bg-inherit z-50`}
-      >
-        <DrawerItem></DrawerItem>
-        <DrawerItem></DrawerItem>
-        <DrawerItem></DrawerItem>
-        <DrawerItem></DrawerItem>
-        <DrawerItem></DrawerItem>
-        <DrawerItem></DrawerItem>
-      </Flex>
+<Flex
+  direction="column"
+  gap="4"
+  className={` row-start-2 overflow-hidden max-w-[400px] bg-inherit z-50`}
+>
+  <DrawerItem /> <DrawerItem /> <DrawerItem />
+</Flex>
+     </div>
+      <DrawerItem />
     </div>
 
     // <NavigationMenu.Root orientation="vertical">

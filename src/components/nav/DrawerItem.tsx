@@ -1,25 +1,23 @@
 import { ReaderIcon } from '@radix-ui/react-icons'
-import { Button, Grid, Box } from '@radix-ui/themes'
-import React from 'react'
+import { Grid, Box, Button } from '@radix-ui/themes'
 
 export const DrawerItem = () => {
   return (
-    <Button variant="ghost">
+    <Button size="3" style={{padding: "0px"}}>
         <Grid
-          className='group-hover:grid-cols-4 bg-green-500'
+          className='group-hover:grid-cols-4 '
           px="4"
           py="2"
           columns="1"
           gap="4"
           width="auto"
         >
-          <Box className="flex justify-start items-center bg-orange-500">
+          <Box className="flex justify-center items-center ">
             <ReaderIcon width="22" height="22" />
           </Box>
-          <Box className="col-span-3 hidden group-hover:flex justify-center items-center">
+          <Box className="col-span-3 hidden group-hover:flex justify-start items-center">
             All Notebooks
           </Box>
-        </Grid>
-      </Button>
+        </Grid></Button>
   )
 }
