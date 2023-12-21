@@ -1,20 +1,22 @@
 import { HamburgerMenuIcon, MoonIcon } from "@radix-ui/react-icons";
 import { Flex, IconButton, Heading, Tooltip, Avatar } from "@radix-ui/themes";
+import { useContext } from "react";
+import { SidebarContext } from "./contexts/SidebarContext";
+import { SidebarContextType } from "types.type";
 
-interface NavbarProps{
-  toggleSidebar:()=>void;
-  drawerVisible: boolean
-}
-export const Navbar = ({toggleSidebar,drawerVisible}:NavbarProps) => {
+
+export const Navbar = () => {
+  const { isExpanded, setIsExpanded } = useContext(
+    SidebarContext
+  ) as SidebarContextType;
   return (
     <Flex id="nav" justify="between" align="center" className="p-1 px-2">
       <span>
-        <div className={`${drawerVisible ? "hidden" : "lg:hidden"}`}>
-        <IconButton onClick={toggleSidebar} >
-          <HamburgerMenuIcon width="20" height="20" />
-        </IconButton>
+        <div className={`${isExpanded ? "hidden" : "lg:hidden"}`}>
+          <IconButton onClick={() => setIsExpanded(true)}>
+            <HamburgerMenuIcon width="20" height="20" />
+          </IconButton>
         </div>
-     
       </span>
 
       <a href="">

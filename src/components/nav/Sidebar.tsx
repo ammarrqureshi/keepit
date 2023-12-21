@@ -1,23 +1,22 @@
-import { Flex, IconButton } from "@radix-ui/themes";
+import { Box, Flex, IconButton } from "@radix-ui/themes";
 import { DrawerItem } from "./DrawerItem";
 import { DrawerSearchItem } from "./DrawerSearchItem";
-import { ArrowLeftIcon, ChevronLeftIcon, PersonIcon, ReaderIcon } from "@radix-ui/react-icons";
-import { useState } from "react";
+import { ChevronLeftIcon, PersonIcon, ReaderIcon } from "@radix-ui/react-icons";
+import { useContext } from "react";
+import { SidebarContext } from "./contexts/SidebarContext";
+import { SidebarContextType } from "types.type";
+
 // import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
-interface SidebarProps{
-  className?:string;
-  toggleSidebar: ()=>void;
-  isVisible: boolean
-}
 
-export const Sidebar = ({className, toggleSidebar, isVisible}:SidebarProps) => {
+
+export const Sidebar = () => {
   
-  
+  const {isExpanded, setIsExpanded} = useContext(SidebarContext) as  SidebarContextType
   return (
-    <div className={`py-2  h-full fixed z-[99999] flex overflow-hidden flex-col justify-between ${isVisible ? "group  " : ""} border-r border-gray-500/50  `}>
-     <div className="absolute top-16 right-0 hidden group-hover:block">
-      <IconButton variant="soft" onClick={toggleSidebar}>
+    <Box onMouseOver={()=> setIsExpanded(true)} onMouseOut={()=>setIsExpanded(false)} className={`py-2 bg-inherit h-full fixed z-[99999999] flex overflow-hidden flex-col justify-between group ${isExpanded ? "" : "max-lg:hidden"} border-r border-gray-500/50  `}>
+     <div className={`absolute top-16 right-0  ${isExpanded ? "block" :"hidden"}`}>
+      <IconButton variant="soft" onClick={()=>setIsExpanded(false)}>
         <ChevronLeftIcon width="18" height="18"/>
       </IconButton>
      </div>
@@ -37,7 +36,7 @@ export const Sidebar = ({className, toggleSidebar, isVisible}:SidebarProps) => {
       <DrawerItem icon="PersonIcon" value="Logout">
         <PersonIcon width="22" height="22" />
       </DrawerItem>
-    </div>
+    </Box>
 
     // <NavigationMenu.Root orientation="vertical">
     //   <NavigationMenu.List>

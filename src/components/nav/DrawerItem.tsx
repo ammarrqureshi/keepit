@@ -1,27 +1,36 @@
 import { Grid, Box, Button } from "@radix-ui/themes";
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
+import { SidebarContext } from "./contexts/SidebarContext";
+import { SidebarContextType } from "types.type";
 
 type ItemProps = {
   icon: string;
-  children: ReactNode,
-  value:string
+  children: ReactNode;
+  value: string;
 };
 
-export const DrawerItem = ({ icon:Icon, children, value }: ItemProps) => {
+export const DrawerItem = ({ icon: Icon, children, value }: ItemProps) => {
+  const { isExpanded } = useContext(SidebarContext) as SidebarContextType;
 
   return (
     <Button variant="ghost" size="3">
       <Grid
-        className="group-hover:grid-cols-4 w-full "
+        className={`  w-full `}
         px="4"
         py="2"
-        columns="1"
+        columns={isExpanded ? "4" : "1"}
         gap="4"
         width="100%"
       >
-        <Box className="flex justify-center items-center ">{Icon && <Icon />}{children}
+        <Box className="flex justify-center items-center ">
+          {Icon && <Icon />}
+          {children}
         </Box>
-        <Box className="col-span-3 hidden group-hover:flex justify-start items-center">
+        <Box
+          className={`"  ${
+            isExpanded ? " flex col-span-3  " : "hidden"
+          }   justify-start items-center"`}
+        >
           {value}
         </Box>
       </Grid>
