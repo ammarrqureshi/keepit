@@ -12,3 +12,9 @@ export type SidebarContextType = {
   isExpanded: boolean;
   setIsExpanded: Dispatch<SetStateAction<boolean>>;
 };
+export type NoteType ={
+  title: string;
+  text: string;
+  created_at: Date;
+  
+}
