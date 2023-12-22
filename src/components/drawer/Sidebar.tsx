@@ -50,6 +50,11 @@ export const Sidebar = () => {
           <DrawerItem icon="ReaderIcon" value="All Notebooks">
             <ReaderIcon width="22" height="22" />
           </DrawerItem>
+          <DrawerItem icon="DashboardIcon" value="Dashboard">
+            <DashboardIcon width="22" height="22" />
+          </DrawerItem>   <DrawerItem icon="DashboardIcon" value="Dashboard">
+            <DashboardIcon width="22" height="22" />
+          </DrawerItem>
         </Flex>
       </div>
       <DrawerItem icon="PersonIcon" value="Logout">

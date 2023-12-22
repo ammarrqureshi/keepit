@@ -1,4 +1,5 @@
 import { NotebookCard } from "@/components/notebook/NotebookCard";
+import { SearchBar } from "@/components/search/SearchBar";
 import { notebooks } from "@/data";
 import {
   Container,
@@ -16,6 +17,7 @@ export const Home = () => {
         <Heading as="h2" size="8">
           Welcome to Keepit , Ammar{" "}
         </Heading>
+        <SearchBar/>
       </Section>
       <Section size="2">
         <Tabs.Root defaultValue="all-notebooks">
