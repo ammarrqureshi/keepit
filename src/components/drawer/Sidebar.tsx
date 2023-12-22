@@ -2,6 +2,7 @@ import { Box, Flex, IconButton } from "@radix-ui/themes";
 import { DrawerItem } from "./DrawerItem";
 import { DrawerSearchItem } from "./DrawerSearchItem";
 import {
+  CheckCircledIcon,
   ChevronLeftIcon,
   DashboardIcon,
   PersonIcon,
@@ -50,10 +51,8 @@ export const Sidebar = () => {
           <DrawerItem icon="ReaderIcon" value="All Notebooks">
             <ReaderIcon width="22" height="22" />
           </DrawerItem>
-          <DrawerItem icon="DashboardIcon" value="Dashboard">
-            <DashboardIcon width="22" height="22" />
-          </DrawerItem>   <DrawerItem icon="DashboardIcon" value="Dashboard">
-            <DashboardIcon width="22" height="22" />
+          <DrawerItem icon="CheckCircledIcon" value="Tasks">
+            <CheckCircledIcon width="22" height="22" />
           </DrawerItem>
         </Flex>
       </div>
