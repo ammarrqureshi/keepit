@@ -12,8 +12,8 @@ import {
 
 export const Home = () => {
   return (
-    <Container size="3">
-      <Section size="2">
+    <Container size="4">
+      <Section size="2" style={{paddingBottom: '0px'}}>
         <Heading as="h2" size="8">
           Welcome to Keepit , Ammar{" "}
         </Heading>
