@@ -12,12 +12,13 @@ import { useContext } from "react";
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { SidebarContextType } from "@/types.type";
 import { CreateNoteItem } from "./CreateNoteItem";
-import { useDrawer } from "@/hooks/useDrawer";
 
 // import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 export const Sidebar = () => {
-  const { isExpanded, setIsExpanded } = useDrawer();
+  const { isExpanded, setIsExpanded } = useContext(
+    SidebarContext
+  ) as SidebarContextType;
   return (
     <Box
       onMouseOver={() => setIsExpanded(true)}

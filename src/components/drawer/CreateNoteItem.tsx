@@ -1,12 +1,11 @@
 import { SidebarContext } from "@/contexts/SidebarContext";
-import { useDrawer } from "@/hooks/useDrawer";
 import { SidebarContextType } from "@/types.type";
 import { PlusIcon } from "@radix-ui/react-icons";
 import { Button, Grid, Box } from "@radix-ui/themes";
 import { useContext } from "react";
 
 export const CreateNoteItem = () => {
-  const { isExpanded } = useDrawer()
+  const { isExpanded } = useContext(SidebarContext) as SidebarContextType;
 
   return (
     <Button variant="soft" style={{ padding: "1rem 0", margin: 4 }} size="3">

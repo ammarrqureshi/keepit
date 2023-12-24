@@ -3,10 +3,9 @@ import { Box, Grid, IconButton, TextField } from "@radix-ui/themes";
 import { useContext } from "react";
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { SidebarContextType } from "@/types.type";
-import { useDrawer } from "@/hooks/useDrawer";
 
 export const DrawerSearchItem = () => {
-  const { isExpanded } = useDrawer();
+  const { isExpanded } = useContext(SidebarContext) as SidebarContextType;
   return (
     <Grid
       className={`w-full `}
