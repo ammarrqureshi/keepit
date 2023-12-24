@@ -3,13 +3,13 @@ import { Button, TextField } from "@radix-ui/themes";
 
 export const SearchBar = () => {
   return (
-    <div>
+    <div className="flex w-full">
       <TextField.Root>
         <TextField.Input placeholder="Search anything..." />
       </TextField.Root>
       <Button>
-        <MagnifyingGlassIcon width="22" height="22" />
         Search
+        <MagnifyingGlassIcon width="20" height="20" />
       </Button>
     </div>
   );

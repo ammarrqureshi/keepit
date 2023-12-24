@@ -16,5 +16,5 @@ export type NoteType ={
   title: string;
   text: string;
   created_at: Date;
-  
+
 }

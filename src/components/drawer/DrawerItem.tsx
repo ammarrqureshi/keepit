@@ -2,6 +2,7 @@ import { Grid, Box, Button } from "@radix-ui/themes";
 import { ReactNode, useContext } from "react";
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { SidebarContextType } from "@/types.type";
+import { useDrawer } from "@/hooks/useDrawer";
 
 type ItemProps = {
   icon: string;
@@ -11,8 +12,7 @@ type ItemProps = {
 };
 
 export const DrawerItem = ({ icon: Icon, children, value }: ItemProps) => {
-  const { isExpanded } = useContext(SidebarContext) as SidebarContextType;
-
+  const { isExpanded } = useDrawer()
   return (
     <Button variant="ghost" size="3">
       <Grid
