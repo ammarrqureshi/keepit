@@ -17,7 +17,7 @@ export const Home = () => {
         <Heading as="h2" size="8">
           Welcome to Keepit , Ammar{" "}
         </Heading>
-        <SearchBar/>
+        <SearchBar className="mt-4"/>
       </Section>
       <Section size="2">
         <Tabs.Root defaultValue="all-notebooks">
