@@ -13,11 +13,11 @@ import {
 export const Home = () => {
   return (
     <Container size="4">
-      <Section size="2" style={{paddingBottom: '0px'}}>
+      <Section  size="2" style={{paddingBottom: '0px'}}>
         <Heading as="h2" size="8">
           Welcome to Keepit , Ammar{" "}
         </Heading>
-        <SearchBar className="mt-4"/>
+        <SearchBar className="mt-4 "/>
       </Section>
       <Section size="2">
         <Tabs.Root defaultValue="all-notebooks">

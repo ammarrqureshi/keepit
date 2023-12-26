@@ -1,9 +1,9 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Button, TextField } from "@radix-ui/themes";
 
-export const SearchBar = ({className}:{className:string}) => {
+export const SearchBar = ({ className }: { className: string }) => {
   return (
-    <div className={`flex w-full ${className}`}>
+    <div className={`flex w-full justify-center items-center ${className}`}>
       <TextField.Root>
         <TextField.Input placeholder="Search anything..." />
       </TextField.Root>
