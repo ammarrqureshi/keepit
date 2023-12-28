@@ -7,7 +7,14 @@ export const notebooks: NotebookType[] = [
     description:
       "this notebook contains all notes from the books i have read i n structured form Lorem Ipsum text etc.. bla bla bla.      this notebook contains all notes from the books i have read i n structured form Lorem Ipsum text etc.. bla bla bla.      this notebook contains all notes from the books  i have read i n structured form Lorem Ipsum text etc.. bla bla bla.",
     created_at: new Date(),
-    notes: [],
+    notes: [{
+      title: "note 1 in first notebook",
+      notes: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    },
+    {
+      title: "note 1 in first notebook",
+      notes: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    } ]
   },
   {
     title: "personal notes and journal",

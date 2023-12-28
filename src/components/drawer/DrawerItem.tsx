@@ -23,7 +23,7 @@ export const DrawerItem = ({ icon: Icon, children, value }: ItemProps) => {
         gap="4"
         width="100%"
       >
-        <Box className="flex justify-center items-center ">
+        <Box className="flex  justify-center items-center ">
           {Icon && <Icon />}
           {children}
         </Box>
