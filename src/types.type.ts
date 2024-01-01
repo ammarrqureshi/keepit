@@ -5,10 +5,10 @@ export type NotebookType = {
   color?: string | "#898989";
   description: string;
   created_at: Date;
-  notes: [{
-    title: string,
+  notes: {
+    title: string
     notes: string
-  }];
+  }[];
 };
 
 export type SidebarContextType = {
