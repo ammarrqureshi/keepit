@@ -13,7 +13,15 @@ export const notebooks: NotebookType[] = [
     },
     {
       title: "note 1 in first notebook",
-      note: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+      note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    },
+    {
+      title: "note 1 in first notebook",
+      note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    },
+    {
+      title: "note 1 in first notebook",
+      note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
     }]
   },
   {

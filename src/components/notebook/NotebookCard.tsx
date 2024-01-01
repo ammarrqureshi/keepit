@@ -8,7 +8,6 @@ import {
   IconButton,
   AlertDialog,
   Button,
-  Text,
   Box,
 } from "@radix-ui/themes";
 import { NotebookType } from "@/types.type";
@@ -37,13 +36,10 @@ export const NotebookCard = (notebook: NotebookType) => {
             </div>
 
             <Separator mb="1" size="4" />
-            <Text className="overflow-hidden h-full">
-              {notebook.description}
-            </Text>
+            {notebook.notes.map((note) => (
+              <NoteCard title={note.title} note={note.note}></NoteCard>
+            ))}
           </Flex>
-          {notebook.notes.map((note) => (
-            <NoteCard title={note.title} note={note.note}></NoteCard>
-          ))}
 
           <Flex
             style={{
@@ -101,7 +97,8 @@ export const NotebookCard = (notebook: NotebookType) => {
             </Flex>
           </Flex>
         </Flex>
-        <div className="w-full absolute bottom-0 inset-x-0 min-h-[10rem] bg-gradient-to-t from-[var(--color-panel-solid)] from-40%"></div>
+        {/* div below for overflow gradient */}
+        <div className="w-full absolute bottom-0 inset-x-0 min-h-[5rem] bg-gradient-to-t from-[var(--color-panel-solid)] from-60%"></div>
       </Box>
     </Card>
   );

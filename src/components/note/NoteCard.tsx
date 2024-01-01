@@ -6,17 +6,17 @@ interface NoteProps {
 }
 export const NoteCard = ({ title, note }: NoteProps) => {
   return (
-    <div>
-      <Card asChild style={{ maxWidth: 350 , borderRadius: "50px"}}>
-        <a href="#">
+    <Card asChild style={{ maxWidth: 350 }}>
+      <a href="#">
+        <div className="rounded-md max-h-10 truncate max-w-px">
           <Text as="div" size="2" weight="bold">
             {title}
           </Text>
           <Text as="div" color="gray" size="2">
             {note}
           </Text>
-        </a>
-      </Card>
-    </div>
+        </div>{" "}
+      </a>
+    </Card>
   );
 };
