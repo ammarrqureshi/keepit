@@ -12,7 +12,7 @@ import {
   Box,
 } from "@radix-ui/themes";
 import { NotebookType } from "@/types.type";
-import { Note } from "../note/Note";
+import { NoteCard } from "../note/NoteCard";
 
 export const NotebookCard = (notebook: NotebookType) => {
   return (
@@ -42,7 +42,7 @@ export const NotebookCard = (notebook: NotebookType) => {
             </Text>
           </Flex>
           {notebook.notes.map((note) => (
-            <Note title={note.title} note={note.note}></Note>
+            <NoteCard title={note.title} note={note.note}></NoteCard>
           ))}
 
           <Flex
