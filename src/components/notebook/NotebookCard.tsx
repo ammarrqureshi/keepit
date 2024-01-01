@@ -36,7 +36,11 @@ export const NotebookCard = (notebook: NotebookType) => {
             </div>
 
             <Separator mb="1" size="4" />
-            {notebook.notes.map((note) => (
+            
+          </Flex>
+          <Flex direction="column-reverse" gap="3" mt="2" >
+            
+          {notebook.notes.map((note) => (
               <NoteCard title={note.title} note={note.note}></NoteCard>
             ))}
           </Flex>
@@ -98,7 +102,7 @@ export const NotebookCard = (notebook: NotebookType) => {
           </Flex>
         </Flex>
         {/* div below for overflow gradient */}
-        <div className="w-full absolute bottom-0 inset-x-0 min-h-[5rem] bg-gradient-to-t from-[var(--color-panel-solid)] from-60%"></div>
+        <div className="w-full absolute bottom-0 inset-x-0 min-h-[6rem] bg-gradient-to-t from-[var(--color-panel-solid)] from-60%"></div>
       </Box>
     </Card>
   );

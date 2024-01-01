@@ -15,7 +15,7 @@ export const NoteCard = ({ title, note }: NoteProps) => {
           <Text as="div" color="gray" size="2">
             {note}
           </Text>
-        </div>{" "}
+        </div>
       </a>
     </Card>
   );
