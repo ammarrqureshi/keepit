@@ -9,12 +9,12 @@ export const notebooks: NotebookType[] = [
     created_at: new Date(),
     notes: [{
       title: "note 1 in first notebook",
-      notes: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+      note: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
     },
     {
       title: "note 1 in first notebook",
-      notes: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
-    } ]
+      note: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    }]
   },
   {
     title: "personal notes and journal",
@@ -30,7 +30,10 @@ export const notebooks: NotebookType[] = [
     description:
       "this notebook contains allmy software projects from the books i hava bla.",
     created_at: new Date(),
-    notes: [],
+    notes: [{
+      title: "hello bhai",
+      note: "mera bhai murshad bad zindabad"
+    }],
   },
   {
     title: "Good food recipes",

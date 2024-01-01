@@ -7,7 +7,7 @@ export type NotebookType = {
   created_at: Date;
   notes: {
     title: string
-    notes: string
+    note: string
   }[];
 };
 

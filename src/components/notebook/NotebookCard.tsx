@@ -12,6 +12,7 @@ import {
   Box,
 } from "@radix-ui/themes";
 import { NotebookType } from "@/types.type";
+import { Note } from "../note/Note";
 
 export const NotebookCard = (notebook: NotebookType) => {
   return (
@@ -40,6 +41,9 @@ export const NotebookCard = (notebook: NotebookType) => {
               {notebook.description}
             </Text>
           </Flex>
+          {notebook.notes.map((note) => (
+            <Note title={note.title} note={note.note}></Note>
+          ))}
 
           <Flex
             style={{
