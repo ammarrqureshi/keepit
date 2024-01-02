@@ -9,6 +9,7 @@ import {
   AlertDialog,
   Button,
   Box,
+  ScrollArea,
 } from "@radix-ui/themes";
 import { NotebookType } from "@/types.type";
 import { NoteCard } from "../note/NoteCard";
@@ -36,14 +37,16 @@ export const NotebookCard = (notebook: NotebookType) => {
             </div>
 
             <Separator mb="1" size="4" />
-            
           </Flex>
-          <Flex direction="column-reverse" gap="3" mt="2" >
-            
-          {notebook.notes.map((note) => (
-              <NoteCard title={note.title} note={note.note}></NoteCard>
-            ))}
-          </Flex>
+
+          <ScrollArea type="auto" scrollbars="vertical" className="w-full h-20  py-4">
+            <Flex direction="column-reverse" gap="3" mt="2" className="bg-green-500">
+              {" "}
+              {notebook.notes.map((note) => (
+                <NoteCard title={note.title} note={note.note}></NoteCard>
+              ))}
+            </Flex>
+          </ScrollArea>
 
           <Flex
             style={{
