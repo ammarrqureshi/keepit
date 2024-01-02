@@ -33,7 +33,7 @@ export const AddNotebook = () => {
           </Dialog.Description>{" "}
           <label>
             <Text as="div" size="3" mb="1" weight="bold">
-              Title
+              Titlea
             </Text>
             <TextField.Input
               variant="surface"

@@ -9,7 +9,6 @@ import {
   AlertDialog,
   Button,
   Box,
-  ScrollArea,
 } from "@radix-ui/themes";
 import { NotebookType } from "@/types.type";
 import { NoteCard } from "../note/NoteCard";

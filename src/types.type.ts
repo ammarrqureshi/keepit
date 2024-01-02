@@ -6,8 +6,8 @@ export type NotebookType = {
   description: string;
   created_at: Date;
   notes: {
-    title: string
-    note: string
+    title: string;
+    note: string;
   }[];
 };
 
@@ -15,9 +15,8 @@ export type SidebarContextType = {
   isExpanded: boolean;
   setIsExpanded: Dispatch<SetStateAction<boolean>>;
 };
-export type NoteType ={
+export type NoteType = {
   title: string;
   text: string;
   created_at: Date;
-
-}
+};
