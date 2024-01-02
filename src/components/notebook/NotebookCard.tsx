@@ -39,14 +39,12 @@ export const NotebookCard = (notebook: NotebookType) => {
             <Separator mb="1" size="4" />
           </Flex>
 
-          <ScrollArea type="auto" scrollbars="vertical" className="w-full h-20  py-4">
-            <Flex direction="column-reverse" gap="3" mt="2" className="bg-green-500">
-              {" "}
-              {notebook.notes.map((note) => (
-                <NoteCard title={note.title} note={note.note}></NoteCard>
-              ))}
-            </Flex>
-          </ScrollArea>
+          <Flex direction="column-reverse" gap="3" mt="2">
+            {" "}
+            {notebook.notes.map((note) => (
+              <NoteCard title={note.title} note={note.note}></NoteCard>
+            ))}
+          </Flex>
 
           <Flex
             style={{
