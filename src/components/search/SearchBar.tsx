@@ -11,6 +11,7 @@ export const SearchBar = ({ className }: { className: string }) => {
         Search
         <MagnifyingGlassIcon width="20" height="20" />
       </Button>
-    </div>
+     
+      </div>
   );
 };
