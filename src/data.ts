@@ -19,7 +19,7 @@ export const notebooks: NotebookType[] = [
       title: "note 1 in first notebook",
       note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
     },
-   {
+    {
       title: "note 1 in first notebook",
       note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
     }]
@@ -50,5 +50,28 @@ export const notebooks: NotebookType[] = [
       "this notebook con text etc.. bla bla bla.      this notebook contains all notes from the books i have read i n structured form Lorem Ipsum text etc.. bla bla bla.      this notebook contains all notes from the books  i have read i n structured form Lorem Ipsum text etc.. bla bla bla.",
     created_at: new Date(),
     notes: [],
+  }, {
+    title: "book summaries",
+    color: "bg-[#d33131]",
+    description:
+      "this notebook contains all notes from the books i have read i n structured form Lorem Ipsum text etc.. bla bla bla.      this notebook contains all notes from the books i have read i n structured form Lorem Ipsum text etc.. bla bla bla.      this notebook contains all notes from the books  i have read i n structured form Lorem Ipsum text etc.. bla bla bla.",
+    created_at: new Date(),
+    notes: [{
+      title: "note 1 in first notebook",
+      note: "this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    },
+    {
+      title: "note 1 in first notebook",
+      note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    },
+    {
+      title: "note 1 in first notebook",
+      note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    },
+    {
+      title: "note 1 in first notebook",
+      note: " this is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsumthis is theo ori jioijj ijijojfo jorj rj j jlore m  ipsum"
+    }]
   },
+
 ];

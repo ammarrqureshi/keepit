@@ -7,7 +7,7 @@ export const Notebooks = () => {
     <div>
       <Heading>
         All Notebooks </Heading>
-      <Flex gap="2" wrap="wrap">
+      <Flex align="center" justify="center" className="bg-slate-500" gap="2" wrap="wrap">
         {notebooks.map((notebook) => (
           <NotebookCard {...notebook}></NotebookCard>
         ))}
