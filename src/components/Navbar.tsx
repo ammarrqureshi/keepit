@@ -10,7 +10,7 @@ export const Navbar = () => {
   ) as SidebarContextType;
 
   return (
-    <Flex id="nav" justify="between" align="center" className="p-1 px-2">
+    <Flex id="nav" justify="between" align="center" className="p-1 px-2 bg-[var(--color-panel-solid)] sticky top-0 z-[999] ">
       <span>
         <div className={`${isExpanded ? "hidden" : "lg:hidden"}`}>
           <IconButton variant="outline" onClick={() => setIsExpanded(true)}>
