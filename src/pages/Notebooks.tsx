@@ -8,11 +8,9 @@ export const Notebooks = () => {
       <Heading>
         All Notebooks </Heading>
       <Flex gap="2" wrap="wrap">
-        {
-          notebooks.map(notebook => (
-            <NotebookCard {...notebook}></NotebookCard>
-          ))
-        }
+        {notebooks.map((notebook) => (
+          <NotebookCard {...notebook}></NotebookCard>
+        ))}
       </Flex>
     </div>
   )
