@@ -16,7 +16,7 @@ import { NoteCard } from "../note/NoteCard";
 export const NotebookCard = (notebook: NotebookType) => {
   return (
     <Card id="notebook-card">
-      <Box style={{ minHeight: 350, maxHeight: 350, minWidth: 300 }}>
+      <Box style={{ minHeight: 350, maxHeight: 350, minWidth: 300, maxWidth: 300 }}>
         <div
           className={`absolute top-0 right-6 w-4 h-8 ${notebook.color} rounded-bl-lg`}
         ></div>

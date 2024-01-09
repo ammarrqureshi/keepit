@@ -2,22 +2,22 @@ import { NotebookCard } from "@/components/notebook/NotebookCard";
 import { SearchBar } from "@/components/search/SearchBar";
 import { notebooks } from "@/data";
 import {
-  Container,
   Section,
   Heading,
   Tabs,
   ScrollArea,
   Flex,
+  Box,
 } from "@radix-ui/themes";
 
 export const Home = () => {
   return (
-    <Container size="4">
-      <Section  size="2" style={{paddingBottom: '0px'}}>
+    <Box>
+      <Section size="2" style={{ paddingBottom: '0px' }}>
         <Heading as="h2" size="8">
           Welcome to Keepit , Ammar{" "}
         </Heading>
-        <SearchBar className="mt-4 "/>
+        <SearchBar className="mt-4 " />
       </Section>
       <Section size="2">
         <Tabs.Root defaultValue="all-notebooks">
@@ -41,7 +41,6 @@ export const Home = () => {
             </ScrollArea>
           </Tabs.Content>
         </Tabs.Root>
-      </Section>
-    </Container>
+      </Section></Box>
   );
 };
