@@ -1,6 +1,3 @@
-
 export const NoteWriter = () => {
-  return (
-    <div>CreateNote</div>
-  )
-}
+  return <div>CreateNote</div>;
+};
