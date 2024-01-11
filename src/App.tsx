@@ -3,7 +3,7 @@ import { SidebarProvider } from "@/contexts/SidebarContext";
 import { Navbar } from "@components/Navbar";
 import { Box, Container } from "@radix-ui/themes";
 import { AddNotebook } from "./components/notebook/AddNotebook";
-import { Notebooks } from "./pages/Notebooks";
+import { NotebookPage } from "./pages/Notebook/NotebookPage";
 function App() {
   return (
     <>
@@ -12,7 +12,7 @@ function App() {
         <Box px="2">
           <Navbar></Navbar>
           <Container size="4">
-            <Notebooks></Notebooks>
+            <NotebookPage></NotebookPage>
           </Container>
         </Box>
         <AddNotebook />
