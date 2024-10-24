@@ -1,9 +1,10 @@
-import Image from "next/image";
+import { FiSettings } from "react-icons/fi";
 
 export default function Home() {
   return (
     <div className="m-0 ">
-      <div></div>
+      <div>hello</div>
+      <FiSettings />
     </div>
   );
 }
