@@ -4,7 +4,6 @@ import "./globals.css";
 import { GeistMono } from "geist/font/mono";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import SidebarWrapper from "@/components/sidebar-wrapper";
-import { AppSidebar } from "@/components/app-sidebar";
 
 export const metadata: Metadata = {
   title: "Lyst",
@@ -20,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistMono.className}>
         <SidebarProvider>
-          <AppSidebar />
+          <SidebarWrapper />
           <SidebarTrigger />
           {children}
         </SidebarProvider>{" "}
