@@ -20,7 +20,6 @@ export default function RootLayout({
       <body className={GeistMono.className}>
         <SidebarProvider>
           <SidebarWrapper />
-          <SidebarTrigger />
           {children}
         </SidebarProvider>{" "}
       </body>
