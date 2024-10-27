@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { GeistMono } from "geist/font/mono";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import SidebarWrapper from "@/components/sidebar-wrapper";
 
 export const metadata: Metadata = {
   title: "Lyst",
@@ -15,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={GeistMono.className}>{children}</body>
+      <SidebarProvider>
+        <body className={GeistMono.className}>
+          <SidebarWrapper />
+          {children}
+        </body>
+      </SidebarProvider>{" "}
     </html>
   );
 }
