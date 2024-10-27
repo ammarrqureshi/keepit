@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { GeistMono } from "geist/font/mono";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import SidebarWrapper from "@/components/sidebar-wrapper";
 
 export const metadata: Metadata = {
@@ -20,6 +20,7 @@ export default function RootLayout({
       <SidebarProvider>
         <body className={GeistMono.className}>
           <SidebarWrapper />
+          <SidebarTrigger />
           {children}
         </body>
       </SidebarProvider>{" "}
