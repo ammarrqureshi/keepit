@@ -41,6 +41,7 @@ import {
   SidebarMenuSubButton,
   SidebarRail,
   SidebarGroup,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 // This is sample data.
@@ -53,15 +54,15 @@ const data = {
 
   binders: [
     {
-      title: "History",
+      title: "My projects",
       url: "#",
     },
     {
-      title: "Starred",
+      title: "Favourite",
       url: "#",
     },
     {
-      title: "Settings",
+      title: "Journal",
       url: "#",
     },
   ],
@@ -99,9 +100,13 @@ export default function Page() {
         <SidebarGroup>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton variant="green" tooltip={"New Note"}>
+              <SidebarMenuButton
+                onClick={() => alert("new page added")}
+                variant="green"
+                tooltip={"New Page"}
+              >
                 <FiFilePlus />
-                New Note +
+                New Page +
               </SidebarMenuButton>
             </SidebarMenuItem>
             <Collapsible
@@ -111,7 +116,7 @@ export default function Page() {
             >
               <SidebarMenuItem>
                 <CollapsibleTrigger asChild>
-                  <SidebarMenuButton tooltip={"binders"}>
+                  <SidebarMenuButton tooltip={"Binders"}>
                     <FiBook />
 
                     <span>{"Binders"}</span>
@@ -139,6 +144,11 @@ export default function Page() {
 
       <SidebarFooter>
         <SidebarMenu>
+          <SidebarGroup>
+            <SidebarMenuItem>
+              <SidebarTrigger />
+            </SidebarMenuItem>
+          </SidebarGroup>
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -146,9 +156,12 @@ export default function Page() {
                   size="lg"
                   className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 >
-                  <Avatar className="h-8 w-8 rounded-lg">
-                    <AvatarImage src={data.user.avatar} alt={data.user.name} />
-                    <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                  <Avatar className="h-8 w-8 rounded-full">
+                    <AvatarImage
+                      src="https://picsum.photos/200/200"
+                      alt={data.user.name}
+                    />
+                    <AvatarFallback className="rounded-full">CN</AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-semibold">
