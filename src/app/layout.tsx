@@ -17,10 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={GeistMono.className}>
+      <body className={`${GeistMono.className} bg-secondary`}>
         <SidebarProvider>
           <SidebarWrapper />
-          {children}
+          <div className="rounded-xl  m-2 bg-background w-full h-full overflow-hidden">
+            {children}
+          </div>
         </SidebarProvider>{" "}
       </body>
     </html>
