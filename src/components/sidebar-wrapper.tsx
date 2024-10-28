@@ -144,11 +144,9 @@ export default function Page() {
 
       <SidebarFooter>
         <SidebarMenu>
-          <SidebarGroup>
-            <SidebarMenuItem>
-              <SidebarTrigger />
-            </SidebarMenuItem>
-          </SidebarGroup>
+          <SidebarMenuItem>
+            <SidebarTrigger />
+          </SidebarMenuItem>
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
