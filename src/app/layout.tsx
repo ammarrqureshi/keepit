@@ -6,8 +6,8 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import SidebarWrapper from "@/components/sidebar-wrapper";
 
 export const metadata: Metadata = {
-  title: "Lyst",
-  description: "Lyst",
+  title: "Keepit",
+  description: "Keepit",
 };
 
 export default function RootLayout({
