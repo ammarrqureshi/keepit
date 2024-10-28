@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import { FiBook } from "react-icons/fi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Collapsible,
@@ -39,6 +40,9 @@ import {
   SidebarMenuSubItem,
   SidebarMenuSubButton,
   SidebarRail,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarInput,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 // This is sample data.
@@ -72,13 +76,12 @@ export default function Page() {
         <SidebarMenu>
           <SidebarMenuItem>
             <div className=" flex gap-2 ">
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+              <div className="flex aspect-square size-8 items-center justify-center rounded-lg  text-sidebar-primary-foreground">
                 <Image
                   src={logoIcon}
                   alt="keepit-logo"
-                  width={20}
-                  height={20}
-                  className="size-4"
+                  width={100}
+                  height={100}
                 />
               </div>
               <div className="grid flex  justify-center items-center  leading-tight">
@@ -93,38 +96,48 @@ export default function Page() {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
+
       <SidebarContent>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton tooltip={"New Note"}>
-              New Note +
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <Collapsible asChild defaultOpen={true} className="group/collapsible">
+        <SidebarGroup>
+          <SidebarMenu>
             <SidebarMenuItem>
-              <CollapsibleTrigger asChild>
-                <SidebarMenuButton tooltip={"Notebooks"}>
-                  <span>{"Notebooks"}</span>
-                  <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-                </SidebarMenuButton>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <SidebarMenuSub>
-                  {data.notebooks?.map((subItem) => (
-                    <SidebarMenuSubItem key={subItem.title}>
-                      <SidebarMenuSubButton asChild>
-                        <a href={subItem.url}>
-                          <span>{subItem.title}</span>
-                        </a>
-                      </SidebarMenuSubButton>
-                    </SidebarMenuSubItem>
-                  ))}
-                </SidebarMenuSub>
-              </CollapsibleContent>
+              <SidebarMenuButton tooltip={"New Note"}>
+                New Note +
+              </SidebarMenuButton>
             </SidebarMenuItem>
-          </Collapsible>
-        </SidebarMenu>
+            <Collapsible
+              asChild
+              defaultOpen={false}
+              className="group/collapsible"
+            >
+              <SidebarMenuItem>
+                <CollapsibleTrigger asChild>
+                  <SidebarMenuButton tooltip={"Notebooks"}>
+                    <FiBook />
+
+                    <span>{"Notebooks"}</span>
+                    <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                  </SidebarMenuButton>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <SidebarMenuSub>
+                    {data.notebooks?.map((subItem) => (
+                      <SidebarMenuSubItem key={subItem.title}>
+                        <SidebarMenuSubButton asChild>
+                          <a href={subItem.url}>
+                            <span>{subItem.title}</span>
+                          </a>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    ))}
+                  </SidebarMenuSub>
+                </CollapsibleContent>
+              </SidebarMenuItem>
+            </Collapsible>
+          </SidebarMenu>
+        </SidebarGroup>
       </SidebarContent>
+
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
