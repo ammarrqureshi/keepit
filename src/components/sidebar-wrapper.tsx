@@ -12,7 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import { FiBook } from "react-icons/fi";
+import { FiBook, FiFile, FiFilePlus } from "react-icons/fi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Collapsible,
@@ -41,8 +41,6 @@ import {
   SidebarMenuSubButton,
   SidebarRail,
   SidebarGroup,
-  SidebarGroupLabel,
-  SidebarInput,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 // This is sample data.
@@ -53,7 +51,7 @@ const data = {
     avatar: "/avatars/shadcn.jpg",
   },
 
-  notebooks: [
+  binders: [
     {
       title: "History",
       url: "#",
@@ -101,7 +99,8 @@ export default function Page() {
         <SidebarGroup>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton tooltip={"New Note"}>
+              <SidebarMenuButton variant="green" tooltip={"New Note"}>
+                <FiFilePlus />
                 New Note +
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -112,16 +111,16 @@ export default function Page() {
             >
               <SidebarMenuItem>
                 <CollapsibleTrigger asChild>
-                  <SidebarMenuButton tooltip={"Notebooks"}>
+                  <SidebarMenuButton tooltip={"binders"}>
                     <FiBook />
 
-                    <span>{"Notebooks"}</span>
+                    <span>{"Binders"}</span>
                     <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <SidebarMenuSub>
-                    {data.notebooks?.map((subItem) => (
+                    {data.binders?.map((subItem) => (
                       <SidebarMenuSubItem key={subItem.title}>
                         <SidebarMenuSubButton asChild>
                           <a href={subItem.url}>
