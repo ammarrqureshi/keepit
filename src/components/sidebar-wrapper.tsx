@@ -12,7 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import { FiBook, FiFile, FiFilePlus } from "react-icons/fi";
+import { FiBook, FiFilePlus } from "react-icons/fi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Collapsible,
