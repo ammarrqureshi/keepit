@@ -1,6 +1,6 @@
 {
-  "name": "keepit-app",
   "version": "0.1.0",
+  "name": "keepit-app",
   "private": true,
   "scripts": {
     "dev": "next dev",
