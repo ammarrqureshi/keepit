@@ -20,9 +20,9 @@ export default function RootLayout({
       <body className={`${GeistMono.className} bg-secondary`}>
         <SidebarProvider>
           <SidebarWrapper />
-          <div className="rounded-xl  m-2 bg-background w-full h-full overflow-hidden">
+          <main className="rounded-xl  ml-0.5 my-2 mr-2 bg-background w-full h-fit overflow-hidden">
             {children}
-          </div>
+          </main>
         </SidebarProvider>{" "}
       </body>
     </html>
