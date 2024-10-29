@@ -12,7 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import { FiBook, FiFilePlus } from "react-icons/fi";
+import { FiBook, FiFilePlus, FiGrid } from "react-icons/fi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Collapsible,
@@ -106,7 +106,13 @@ export default function Page() {
                 tooltip={"New Page"}
               >
                 <FiFilePlus />
-                New Page +
+                <span>New Page +</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton tooltip={"Dash"}>
+                <FiGrid />
+                <span>Dash</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <Collapsible
@@ -119,7 +125,7 @@ export default function Page() {
                   <SidebarMenuButton tooltip={"Binders"}>
                     <FiBook />
 
-                    <span>{"Binders"}</span>
+                    <span>Binders</span>
                     <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
