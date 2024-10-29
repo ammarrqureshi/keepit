@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <div>
       <div className="p-4 ">
-        <Input placeholder="Write the title..." />
+        <Input placeholder="Start writing..." />
       </div>
     </div>
   );
