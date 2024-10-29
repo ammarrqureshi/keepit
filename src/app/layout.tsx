@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { GeistMono } from "geist/font/mono";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import SidebarWrapper from "@/components/sidebar-wrapper";
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function RootLayout({
           <SidebarWrapper />
           <div className="w-full flex flex-col  justify-center ">
             <main className="rounded-xl  ml-0.5  mr-1 p-4 box-border bg-background h-[98vh] overflow-hidden">
+              <SidebarTrigger className="hidden max-sm:block" />
               {children}
             </main>
           </div>
