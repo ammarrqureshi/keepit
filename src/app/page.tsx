@@ -7,7 +7,7 @@ export default function Home() {
         <Input placeholder="Start writing..." />
       </div>
       <div>
-        <BindersWrapper />
+        <BinderWrapper />
       </div>
     </div>
   );
