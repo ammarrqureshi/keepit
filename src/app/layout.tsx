@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${GeistMono.className} bg-secondary`}>
+      <body className={`${GeistMono.className} bg-secondary `}>
         <SidebarProvider>
           <SidebarWrapper />
           <div className="w-full flex flex-col  justify-center ">

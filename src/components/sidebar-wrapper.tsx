@@ -102,7 +102,7 @@ export default function Page() {
             <SidebarMenuItem>
               <SidebarMenuButton
                 onClick={() => alert("new page added")}
-                className="bg-green-500 text-background"
+                className="bg-primary text-background"
                 tooltip={"New Page"}
               >
                 <FiFilePlus />
