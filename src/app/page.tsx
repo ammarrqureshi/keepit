@@ -1,4 +1,4 @@
-import BindersWrapper from "@/components/binders-wrapper";
+import BinderWrapper from "@/components/binder-wrapper";
 import { Input } from "@/components/ui/input";
 export default function Home() {
   return (
