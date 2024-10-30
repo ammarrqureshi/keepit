@@ -52,11 +52,7 @@ export default function BinderWrapper() {
               <Card>
                 <CardHeader className="relative">
                   <div className="flex gap-2  items-center ">
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                      className={`bg-${binder.color}-500 text-background`}
-                    >
+                    <Button variant="secondary" size="icon">
                       <FiPenTool />
                     </Button>
                     {binder.title}

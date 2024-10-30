@@ -21,7 +21,7 @@ export default function RootLayout({
         <SidebarProvider>
           <SidebarWrapper />
           <div className="w-full flex flex-col  justify-center ">
-            <main className="rounded-xl  ml-0.5  mr-1 p-4 box-border bg-background h-[98vh] overflow-hidden">
+            <main className="rounded-xl  ml-0.5  mr-1 p-4 box-border bg-background h-[98vh] overflow-auto">
               <SidebarTrigger className="hidden max-sm:block" />
               {children}
             </main>
