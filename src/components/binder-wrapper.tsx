@@ -44,7 +44,7 @@ export default function BinderWrapper() {
         ))}
       </CarouselContent>
 
-      <div className="h-full w-24  absolute top-0 right-0 bg-gradient-to-l from-white"></div>
+      <div className="h-full w-24  absolute top-0 right-0 bg-gradient-to-l from-background"></div>
     </Carousel>
   );
 }
