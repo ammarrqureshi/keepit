@@ -5,7 +5,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Button } from "./ui/button";
-import { FiEdit, FiEdit2, FiPenTool } from "react-icons/fi";
+import { FiEdit2, FiPenTool } from "react-icons/fi";
 
 export default function BinderWrapper() {
   return (
