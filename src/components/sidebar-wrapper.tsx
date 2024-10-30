@@ -97,20 +97,22 @@ export default function Page() {
       </SidebarHeader>
 
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarMenu>
+        <SidebarMenu>
+          <SidebarGroup>
             <SidebarMenuItem>
               <SidebarMenuButton
                 onClick={() => alert("new page added")}
-                variant="green"
+                className="bg-green-500 text-background"
                 tooltip={"New Page"}
               >
                 <FiFilePlus />
                 <span>New Page +</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+          </SidebarGroup>
+          <SidebarGroup>
             <SidebarMenuItem>
-              <SidebarMenuButton tooltip={"Dash"}>
+              <SidebarMenuButton isActive tooltip={"Dash"}>
                 <FiGrid />
                 <span>Dash</span>
               </SidebarMenuButton>
@@ -144,8 +146,8 @@ export default function Page() {
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
-          </SidebarMenu>
-        </SidebarGroup>
+          </SidebarGroup>
+        </SidebarMenu>
       </SidebarContent>
 
       <SidebarFooter>
