@@ -5,7 +5,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Button } from "./ui/button";
-import { FiPenTool } from "react-icons/fi";
+import { FiEdit, FiEdit2, FiPenTool } from "react-icons/fi";
 
 export default function BinderWrapper() {
   return (
@@ -17,10 +17,17 @@ export default function BinderWrapper() {
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-            <div className="p-1">
+          <CarouselItem key={index} className=" lg:basis-1/4">
+            <div className="p-1 e">
               <Card>
-                <CardHeader>
+                <CardHeader className="relative">
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="absolute  top-0 right-0"
+                  >
+                    <FiEdit2 />
+                  </Button>
                   <div>
                     <div className="flex gap-2  items-center ">
                       <Button size="icon" variant="destructive">
