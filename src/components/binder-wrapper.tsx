@@ -49,17 +49,19 @@ export default function BinderWrapper() {
     >
       <CarouselContent>
         {binders.map((binder, index) => (
-          <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/4">
-            <div className="p-1 e">
-              <Card>
-                <CardHeader className="relative">
+          <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/4 ">
+            <div className="p-1 h-full">
+              <Card className="flex flex-col h-52">
+                <CardHeader className="flex-none">
                   <div className="flex gap-2  items-center ">
                     <BinderIconButton icon={FiPenTool} />
                     {binder.title}
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-xs text-zinc-700">{binder.description}</p>
+                <CardContent className="flex-grow  pb-16 overflow-hidden">
+                  <p className="text-xs text-zinc-700 line-clamp-3">
+                    {binder.description}
+                  </p>
                 </CardContent>
                 <CardFooter>
                   <div className="flex justify-between items-center w-full">
