@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "./ui/button";
 import { FiEdit2, FiPenTool, FiShare } from "react-icons/fi";
+import BinderIconButton from "./binder-icon-button";
+import { FileUser } from "lucide-react";
 
 const binders = [
   {
@@ -52,9 +54,7 @@ export default function BinderWrapper() {
               <Card>
                 <CardHeader className="relative">
                   <div className="flex gap-2  items-center ">
-                    <Button variant="secondary" size="icon">
-                      <FiPenTool />
-                    </Button>
+                    <BinderIconButton icon={FiPenTool} />
                     {binder.title}
                   </div>
                 </CardHeader>

@@ -4,9 +4,7 @@ import { Separator } from "@/components/ui/separator";
 export default function Home() {
   return (
     <div>
-      <div>
-        <Input placeholder="Start writing..." />
-      </div>
+      <Input placeholder="Start writing..." />
       <div className="flex flex-col gap-4 my-4">
         <h2 className="font-bold text-2xl">Binders</h2>
         <Separator />
