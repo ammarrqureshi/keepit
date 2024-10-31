@@ -12,7 +12,6 @@ import {
 import { Button } from "./ui/button";
 import { FiEdit2, FiPenTool, FiShare } from "react-icons/fi";
 import BinderIconButton from "./binder-icon-button";
-import { FileUser } from "lucide-react";
 
 const binders = [
   {

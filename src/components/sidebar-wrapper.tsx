@@ -3,16 +3,18 @@ import logoIcon from "@/assets/keepit-symbol-primary.svg";
 import logoText from "@/assets/keepit-primary.svg";
 import * as React from "react";
 import {
-  BadgeCheck,
-  Bell,
-  ChevronRight,
-  ChevronsUpDown,
-  CreditCard,
-  LogOut,
-  Sparkles,
-} from "lucide-react";
-
-import { FiBook, FiFilePlus, FiGrid, FiSearch, FiStar } from "react-icons/fi";
+  FiBook,
+  FiChevronsRight,
+  FiChevronsUp,
+  FiDollarSign,
+  FiFilePlus,
+  FiGrid,
+  FiLogOut,
+  FiSearch,
+  FiStar,
+  FiUser,
+  FiZap,
+} from "react-icons/fi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Collapsible,
@@ -134,7 +136,7 @@ export default function Page() {
                     <FiBook />
 
                     <span>Binders</span>
-                    <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                    <FiChevronsRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -187,7 +189,7 @@ export default function Page() {
                     </span>
                     <span className="truncate text-xs">{data.user.email}</span>
                   </div>
-                  <ChevronsUpDown className="ml-auto size-4" />
+                  <FiChevronsUp className="ml-auto size-4" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent
@@ -218,28 +220,24 @@ export default function Page() {
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuItem>
-                    <Sparkles />
+                    <FiZap />
                     Upgrade to Pro
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuItem>
-                    <BadgeCheck />
+                    <FiUser />
                     Account
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <CreditCard />
+                    <FiDollarSign />
                     Billing
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Bell />
-                    Notifications
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <LogOut />
+                  <FiLogOut />
                   Log out
                 </DropdownMenuItem>
               </DropdownMenuContent>
