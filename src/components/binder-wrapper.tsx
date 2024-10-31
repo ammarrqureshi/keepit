@@ -51,7 +51,7 @@ export default function BinderWrapper() {
           <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/4 ">
             <div className="p-1 h-full ">
               <Card className="flex flex-col h-64 overflow-hidden relative">
-                <span className="h-[5px] bg-transparent border-t-8 border-dashed border-secondary  from-indigo-500   w-full absolute top-0"></span>
+                <span className="h-[5px] bg-transparent border-t-8 border-dashed border-secondary  w-full absolute top-0"></span>
                 <CardHeader className="flex-none">
                   <div className="flex gap-2  items-center ">
                     <BinderIconButton icon={FiPenTool} />

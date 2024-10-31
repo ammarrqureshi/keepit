@@ -12,7 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import { FiBook, FiFilePlus, FiGrid } from "react-icons/fi";
+import { FiBook, FiFilePlus, FiGrid, FiSearch, FiStar } from "react-icons/fi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Collapsible,
@@ -117,6 +117,12 @@ export default function Page() {
                 <span>Dash</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton tooltip="Search">
+                <FiSearch />
+                <span>Search</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
             <Collapsible
               asChild
               defaultOpen={false}
@@ -146,6 +152,12 @@ export default function Page() {
                 </CollapsibleContent>
               </SidebarMenuItem>
             </Collapsible>
+            <SidebarMenuItem>
+              <SidebarMenuButton tooltip="Favourites">
+                <FiStar />
+                <span>Favourites</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
           </SidebarGroup>
         </SidebarMenu>
       </SidebarContent>
