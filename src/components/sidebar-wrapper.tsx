@@ -5,8 +5,6 @@ import * as React from "react";
 import {
   FiBook,
   FiChevronRight,
-  FiChevronsRight,
-  FiChevronsUp,
   FiChevronUp,
   FiDollarSign,
   FiFilePlus,
