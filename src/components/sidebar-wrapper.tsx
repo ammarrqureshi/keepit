@@ -1,6 +1,6 @@
 "use client";
-import logoIcon from "@/assets/aspird-monogram-PNG.png";
-import logoText from "@/assets/Asset 2.png";
+import logoIcon from "@/assets/keepit-symbol-primary.svg";
+import logoText from "@/assets/keepit-primary.svg";
 import * as React from "react";
 import {
   BadgeCheck,
