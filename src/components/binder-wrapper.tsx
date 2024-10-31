@@ -28,8 +28,7 @@ const binders = [
   },
   {
     title: "My diary",
-    description:
-      "Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df ",
+    description: "Lorepdf ajdf f dfdlj df Lorepdf aj",
     color: "amber",
   },
   {
@@ -50,8 +49,9 @@ export default function BinderWrapper() {
       <CarouselContent>
         {binders.map((binder, index) => (
           <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/4 ">
-            <div className="p-1 h-full">
-              <Card className="flex flex-col h-52">
+            <div className="p-1 h-full ">
+              <Card className="flex flex-col h-64 overflow-hidden relative">
+                <span className="h-[5px] bg-transparent border-t-8 border-dashed border-secondary  from-indigo-500   w-full absolute top-0"></span>
                 <CardHeader className="flex-none">
                   <div className="flex gap-2  items-center ">
                     <BinderIconButton icon={FiPenTool} />
