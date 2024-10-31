@@ -4,8 +4,10 @@ import logoText from "@/assets/keepit-primary.svg";
 import * as React from "react";
 import {
   FiBook,
+  FiChevronRight,
   FiChevronsRight,
   FiChevronsUp,
+  FiChevronUp,
   FiDollarSign,
   FiFilePlus,
   FiGrid,
@@ -136,7 +138,7 @@ export default function Page() {
                     <FiBook />
 
                     <span>Binders</span>
-                    <FiChevronsRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                    <FiChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                   </SidebarMenuButton>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
@@ -189,7 +191,7 @@ export default function Page() {
                     </span>
                     <span className="truncate text-xs">{data.user.email}</span>
                   </div>
-                  <FiChevronsUp className="ml-auto size-4" />
+                  <FiChevronUp className="ml-auto size-4" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent
