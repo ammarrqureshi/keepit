@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 import { GeistMono } from "geist/font/mono";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import SidebarWrapper from "@/components/sidebar-wrapper";
