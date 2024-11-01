@@ -236,7 +236,7 @@ export default function Page() {
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem className="text-red-500">
                   <FiLogOut />
                   Log out
                 </DropdownMenuItem>
