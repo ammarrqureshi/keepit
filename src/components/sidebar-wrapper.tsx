@@ -57,15 +57,15 @@ const data = {
   binders: [
     {
       title: "My projects",
-      url: "#",
+      url: "/binders/03",
     },
     {
       title: "Favourite",
-      url: "#",
+      url: "/binders/02",
     },
     {
       title: "Journal",
-      url: "#",
+      url: "/binders/01",
     },
   ],
 };

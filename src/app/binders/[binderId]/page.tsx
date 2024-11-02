@@ -6,10 +6,10 @@ export default async function Binder({
   params: Promise<{ binderId: string }>;
 }) {
   const binderId = (await params).binderId;
-  return (
-    <div>
-      Binder
-      {}
-    </div>
-  );
+  const binder = binders.find((binder) => binder.binderId === binderId);
+  if (!binder) {
+    return <div>No such Binder exists!</div>;
+  }
+
+  return <div>{binder.title}</div>;
 }
