@@ -46,6 +46,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
+import Link from "next/link";
 // This is sample data.
 const data = {
   user: {
@@ -142,13 +143,13 @@ export default function Page() {
                 <CollapsibleContent>
                   <SidebarMenuSub>
                     {data.binders?.map((subItem) => (
-                      <SidebarMenuSubItem key={subItem.title}>
-                        <SidebarMenuSubButton asChild>
-                          <a href={subItem.url}>
+                      <Link href={subItem.url}>
+                        <SidebarMenuSubItem key={subItem.title}>
+                          <SidebarMenuSubButton asChild>
                             <span>{subItem.title}</span>
-                          </a>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
+                          </SidebarMenuSubButton>
+                        </SidebarMenuSubItem>
+                      </Link>
                     ))}
                   </SidebarMenuSub>
                 </CollapsibleContent>
