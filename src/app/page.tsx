@@ -2,6 +2,7 @@ import BinderWrapper from "@/components/binder-wrapper";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+
 export default function Home() {
   return (
     <div>
