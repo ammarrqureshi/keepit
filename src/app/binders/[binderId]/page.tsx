@@ -11,5 +11,10 @@ export default async function Binder({
     return <div>No such Binder exists!</div>;
   }
 
-  return <div>{binder.title}</div>;
+  return (
+    <div>
+      {binder.title}
+      {binder.pages?.map((page) => <div>{page}</div>)}
+    </div>
+  );
 }
