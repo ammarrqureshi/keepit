@@ -12,31 +12,8 @@ import {
 import { Button } from "./ui/button";
 import { FiEdit2, FiPenTool, FiShare } from "react-icons/fi";
 import BinderIconButton from "./binder-icon-button";
+import { binders } from "@/data";
 
-const binders = [
-  {
-    title: "My diary",
-    description: "Lorepdf ajdf f dfdlj df ",
-    color: "cyan",
-  },
-  {
-    title: "My diary",
-    description:
-      "dfk dflkj dlfj dfkjdskfj dfj dkfj dfdjfj difdj fdkf jdf j dfdfj ddf ",
-    color: "zinc",
-  },
-  {
-    title: "My diary",
-    description: "Lorepdf ajdf f dfdlj df Lorepdf aj",
-    color: "amber",
-  },
-  {
-    title: "My diary",
-    description:
-      "Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df Lorepdf ajdf f dfdlj df ",
-    color: "red",
-  },
-];
 export default function BinderWrapper() {
   return (
     <Carousel

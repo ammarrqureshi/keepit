@@ -1,6 +1,7 @@
 export interface Binder {
   binderId: string;
   title: string;
+  description?: string;
   color?: string | "#f2f2f2";
   pages?: string[];
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import { binders } from "@/data";
 export default async function Binder({
   params,
