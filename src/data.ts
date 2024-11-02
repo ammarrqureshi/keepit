@@ -10,6 +10,8 @@ export const binders: Binder[] = [
   {
     binderId: "01",
     title: "My Journal",
+    description:
+      "this is all about my daily entries and thoughts i wrestle with.",
     pages: ["day 1", "day 2", "day 3"],
   },
   {
