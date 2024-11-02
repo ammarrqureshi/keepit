@@ -21,4 +21,9 @@ export const binders: Binder[] = [
     title: "My projects",
     pages: ["Keepit", "likhlo"],
   },
+  {
+    binderId: "04",
+    title: "2024",
+    pages: ["goals ", "likhlo"],
+  },
 ];

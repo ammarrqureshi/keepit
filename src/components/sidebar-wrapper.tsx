@@ -47,6 +47,7 @@ import {
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 import Link from "next/link";
+import { binders } from "@/data";
 // This is sample data.
 const data = {
   user: {
@@ -54,23 +55,7 @@ const data = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-
-  binders: [
-    {
-      title: "My projects",
-      url: "/binders/03",
-    },
-    {
-      title: "Favourite",
-      url: "/binders/02",
-    },
-    {
-      title: "Journal",
-      url: "/binders/01",
-    },
-  ],
 };
-
 export default function Page() {
   return (
     <Sidebar collapsible="icon">
@@ -142,8 +127,8 @@ export default function Page() {
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <SidebarMenuSub>
-                    {data.binders?.map((subItem) => (
-                      <Link href={subItem.url}>
+                    {binders?.map((subItem) => (
+                      <Link href={`/binders/${subItem.binderId}`}>
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton asChild>
                             <span>{subItem.title}</span>
