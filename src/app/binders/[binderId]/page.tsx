@@ -1,4 +1,5 @@
 import { binders } from "@/data";
+
 export default async function Binder({
   params,
 }: {
@@ -6,6 +7,7 @@ export default async function Binder({
 }) {
   const binderId = (await params).binderId;
   const binder = binders.find((binder) => binder.binderId === binderId);
+
   if (!binder) {
     return <div>No such Binder exists!</div>;
   }

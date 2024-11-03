@@ -127,8 +127,8 @@ export default function Page() {
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <SidebarMenuSub>
-                    {binders?.map((subItem) => (
-                      <Link href={`/binders/${subItem.binderId}`}>
+                    {binders?.map((subItem, index) => (
+                      <Link key={index} href={`/binders/${subItem.binderId}`}>
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton asChild>
                             <span>{subItem.title}</span>
