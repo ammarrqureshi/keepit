@@ -62,24 +62,26 @@ export default function Page() {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <div className=" flex gap-2 ">
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg  text-sidebar-primary-foreground">
-                <Image
-                  src={logoIcon}
-                  alt="keepit-logo"
-                  width={100}
-                  height={100}
-                />
+            <Link href="/">
+              <div className=" flex gap-2 ">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg  text-sidebar-primary-foreground">
+                  <Image
+                    src={logoIcon}
+                    alt="keepit-logo"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                <div className="grid flex  justify-center items-center  leading-tight">
+                  <Image
+                    src={logoText}
+                    alt="keepit-logo"
+                    width={100}
+                    height={100}
+                  />
+                </div>
               </div>
-              <div className="grid flex  justify-center items-center  leading-tight">
-                <Image
-                  src={logoText}
-                  alt="keepit-logo"
-                  width={100}
-                  height={100}
-                />
-              </div>
-            </div>
+            </Link>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
