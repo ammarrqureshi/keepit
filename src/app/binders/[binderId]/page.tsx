@@ -1,4 +1,6 @@
+import { Heading1 } from "@/components/ui/heading";
 import { binders } from "@/data";
+import { Separator } from "@/components/ui/separator";
 
 export default async function Binder({
   params,
@@ -14,7 +16,10 @@ export default async function Binder({
 
   return (
     <div>
-      {binder.title}
+      <div className="flex flex-col justify-between gap-4 py-4">
+        <Heading1>{binder.title}</Heading1>
+        <Separator />
+      </div>
       {binder.pages?.map((page) => <div>{page}</div>)}
     </div>
   );
