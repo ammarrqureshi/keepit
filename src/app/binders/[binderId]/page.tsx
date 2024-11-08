@@ -23,7 +23,7 @@ export default async function Binder({
         <BinderIconButton
           className="p-8"
           icon={FiPenTool}
-          iconStyle="scale-150"
+          iconStyle="scale-[2]"
         />
         <Heading1>{binder.title}</Heading1>
         <Separator />
