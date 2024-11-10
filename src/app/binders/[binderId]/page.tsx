@@ -3,7 +3,6 @@ import { binders } from "@/data";
 import { Separator } from "@/components/ui/separator";
 import BinderIconButton from "@/components/binder-icon-button";
 import { FiPenTool } from "react-icons/fi";
-import { Button } from "@/components/ui/button";
 
 export default async function Binder({
   params,
