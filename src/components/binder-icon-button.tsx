@@ -7,6 +7,7 @@ import { PopoverContent } from "@radix-ui/react-popover";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
@@ -30,10 +31,10 @@ export default function BinderIconButton({
           {children}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <Button size="icon" variant="ghost">
+      <DropdownMenuContent className="flex flex-row gap-2 ">
+        <DropdownMenuItem className="w-8 h-8">
           <FiPlus />
-        </Button>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
