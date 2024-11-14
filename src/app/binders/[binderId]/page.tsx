@@ -2,7 +2,7 @@ import { Heading1 } from "@/components/ui/heading";
 import { binders } from "@/data";
 import { Separator } from "@/components/ui/separator";
 import BinderIconButton from "@/components/binder-icon-button";
-import { FiPenTool, FiPlus, FiTrash } from "react-icons/fi";
+import { FiPenTool, FiPlus, FiTrash, FiStar, FiEdit2 } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
 
 export default async function Binder({

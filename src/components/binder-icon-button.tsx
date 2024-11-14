@@ -1,6 +1,14 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import type { IconType } from "react-icons";
+import { FiPenTool, FiPlus, FiTrash, FiStar, FiEdit2 } from "react-icons/fi";
+import { Popover, PopoverTrigger } from "./ui/popover";
+import { PopoverContent } from "@radix-ui/react-popover";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 interface IconButtonProps extends React.ComponentProps<typeof Button> {
   icon: IconType;
@@ -15,10 +23,19 @@ export default function BinderIconButton({
   ...props
 }: IconButtonProps) {
   return (
-    <Button size="icon" {...props}>
-      <Icon className={iconStyle} />
-      {children}
-    </Button>
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <Button size="icon" {...props}>
+          <Icon className={iconStyle} />
+          {children}
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <Button size="icon" variant="ghost">
+          <FiPlus />
+        </Button>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 
