@@ -2,8 +2,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import type { IconType } from "react-icons";
 import { FiPenTool, FiPlus, FiTrash, FiStar, FiEdit2 } from "react-icons/fi";
-import { Popover, PopoverTrigger } from "./ui/popover";
-import { PopoverContent } from "@radix-ui/react-popover";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,13 +23,13 @@ export default function BinderIconButton({
 }: IconButtonProps) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>
         <Button size="icon" {...props}>
           <Icon className={iconStyle} />
           {children}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="flex flex-row gap-2 ">
+      <DropdownMenuContent className="flex flex-row gap-2 flex-wrap  max-w-72 h-auto overflow-visible ">
         <DropdownMenuItem className="w-8 h-8">
           <FiPlus />
         </DropdownMenuItem>

@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import BinderIconButton from "@/components/binder-icon-button";
 import { FiPenTool, FiPlus, FiTrash, FiStar, FiEdit2 } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default async function Binder({
   params,
@@ -16,7 +17,7 @@ export default async function Binder({
   if (!binder) {
     return <div>No such Binder exists!</div>;
   }
-
+  const [icon, setIcon] = useState("Plus");
   return (
     <div>
       <div className="flex flex-col justify-between gap-4 py-4">
