@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { IconType } from "react-icons";
 import { FiPenTool, FiPlus, FiTrash, FiStar, FiEdit2 } from "react-icons/fi";
@@ -12,7 +14,6 @@ import {
 interface IconButtonProps extends React.ComponentProps<typeof Button> {
   icon: IconType;
   iconStyle?: string;
-  children: React.ReactNode;
 }
 
 export default function BinderIconButton({
@@ -21,12 +22,13 @@ export default function BinderIconButton({
   children,
   ...props
 }: IconButtonProps) {
+  const [selectedIcon, setSelectedIcon] = useState<any>(FiPlus);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="icon" {...props}>
-          <Icon className={iconStyle} />
-          {children}
+          <selectedIcon className={iconStyle} />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="flex flex-row gap-2 flex-wrap  max-w-72 h-auto overflow-visible ">
